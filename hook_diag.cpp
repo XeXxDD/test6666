@@ -15,6 +15,8 @@ static HWND  g_hSet = nullptr;
 static HWND  g_hEquals = nullptr;
 static HBRUSH g_hDarkBrush = nullptr;
 static WNDPROC g_originalWndProc = nullptr;
+static HWND g_hVariable = nullptr;
+static HWND g_hValue = nullptr;
 
 static std::ofstream g_log;
 
@@ -123,18 +125,24 @@ BOOL CALLBACK FindDialogProc(HWND hwnd, LPARAM)
 
     if (hSet && hEquals)
     {
+        g_hDialog = hwnd;
         g_hSet = hSet;
         g_hEquals = hEquals;
 
-        Log("[FOUND] Target dialog: " + HwndToString(g_hDialog));
-        Log("[FOUND] Set:           " + HwndToString(g_hSet));
-        Log("[FOUND] Equals:        " + HwndToString(g_hEquals));
+        // НОВОЕ
+        g_hVariable = FindDirectChild(L"Button", L"Variable");
+        g_hValue    = FindDirectChild(L"Button", L"Value");
+
+        Log("[FOUND] Variable: 0x%016llX",
+            reinterpret_cast<unsigned long long>(g_hVariable));
+
+        Log("[FOUND] Value:    0x%016llX",
+        reinterpret_cast<unsigned long long>(g_hValue));
 
         return FALSE;
     }
-
+    
     g_hDialog = nullptr;
-
     return TRUE;
 }
 
@@ -149,60 +157,33 @@ LRESULT CALLBACK DialogWndProc(
     WPARAM wParam,
     LPARAM lParam)
 {
-    if (uMsg == WM_CTLCOLORSTATIC)
-    {
-        HWND hStatic = reinterpret_cast<HWND>(lParam);
+if (uMsg == WM_DRAWITEM) {
+    auto* dis = reinterpret_cast<DRAWITEMSTRUCT*>(lParam);
+
+    if (dis &&
+        (dis->hwndItem == g_hVariable ||
+         dis->hwndItem == g_hValue)) {
+
+        wchar_t text[256]{};
+        GetWindowTextW(dis->hwndItem, text, ARRAYSIZE(text));
 
         Log(
-            "[WM_CTLCOLORSTATIC] child=" +
-            HwndToString(hStatic) +
-            " class=" +
-            GetClassNameString(hStatic) +
-            " text='" +
-            GetWindowTextString(hStatic) +
-            "'"
+            "[WM_DRAWITEM] hwndItem=0x%016llX class=Button text='%ls' "
+            "CtlID=%u itemID=%u itemAction=0x%X itemState=0x%X "
+            "rect=(%ld,%ld)-(%ld,%ld)",
+            reinterpret_cast<unsigned long long>(dis->hwndItem),
+            text,
+            dis->CtlID,
+            dis->itemID,
+            dis->itemAction,
+            dis->itemState,
+            dis->rcItem.left,
+            dis->rcItem.top,
+            dis->rcItem.right,
+            dis->rcItem.bottom
         );
-
-        if (hStatic == g_hSet || hStatic == g_hEquals)
-        {
-            HDC hdc = reinterpret_cast<HDC>(wParam);
-
-            SetTextColor(
-                hdc,
-                RGB(220, 220, 220)
-            );
-
-            SetBkColor(
-                hdc,
-                RGB(30, 30, 30)
-            );
-
-            SetBkMode(
-                hdc,
-                OPAQUE
-            );
-
-            return reinterpret_cast<LRESULT>(
-                g_hDarkBrush
-            );
-        }
     }
 
-    Log(
-        "[CALLBACK] msg=0x" +
-        [] (UINT msg)
-        {
-            char buffer[32];
-            sprintf_s(
-                buffer,
-                sizeof(buffer),
-                "%X",
-                msg
-            );
-
-            return std::string(buffer);
-        }(uMsg)
-    );
 
     return CallWindowProcW(
         g_originalWndProc,
@@ -212,7 +193,6 @@ LRESULT CALLBACK DialogWndProc(
         lParam
     );
 }
-
 // ------------------------------------------------------------
 // Установка subclass
 // ------------------------------------------------------------
