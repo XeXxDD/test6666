@@ -14,6 +14,7 @@ static HWND  g_hDialog = nullptr;
 static HWND  g_hSet = nullptr;
 static HWND  g_hEquals = nullptr;
 static HBRUSH g_hDarkBrush = nullptr;
+static WNDPROC g_originalWndProc = nullptr;
 
 static std::ofstream g_log;
 
@@ -223,6 +224,7 @@ DWORD WINAPI InstallThread(LPVOID)
     Sleep(1000);
 
     char path[MAX_PATH] = {};
+
     GetModuleFileNameA(
         reinterpret_cast<HMODULE>(&__ImageBase),
         path,
@@ -232,75 +234,86 @@ DWORD WINAPI InstallThread(LPVOID)
     std::string logPath = path;
 
     size_t slash = logPath.find_last_of("\\/");
+
     if (slash != std::string::npos)
         logPath.resize(slash + 1);
 
     logPath += "hook_diag.log";
 
-    g_log.open(logPath, std::ios::out | std::ios::trunc);
+    g_log.open(
+        logPath,
+        std::ios::out | std::ios::trunc
+    );
 
     Log("=== hook_diag started ===");
-    Log("[INFO] Current PID: " +
-        std::to_string(GetCurrentProcessId()));
 
-    EnumWindows(FindDialogProc, 0);
+    Log(
+        "[INFO] Current PID: " +
+        std::to_string(GetCurrentProcessId())
+    );
+
+    // --------------------------------------------------------
+    // Ищем target dialog
+    // --------------------------------------------------------
+
+    EnumWindows(
+        FindDialogProc,
+        0
+    );
 
     if (!g_hDialog)
     {
-        Log("[ERROR] Target #32770 dialog not found.");
+        Log(
+            "[ERROR] Target #32770 dialog not found."
+        );
+
         return 0;
     }
 
-    g_hDarkBrush = CreateSolidBrush(RGB(30, 30, 30));
+    // --------------------------------------------------------
+    // Создаём кисть для тёмного фона
+    // --------------------------------------------------------
+
+    g_hDarkBrush =
+        CreateSolidBrush(
+            RGB(30, 30, 30)
+        );
 
     if (!g_hDarkBrush)
     {
-        Log("[ERROR] CreateSolidBrush failed. Error=" +
-            std::to_string(GetLastError()));
-
-        return 0;
-    }
-
-    SetLastError(ERROR_SUCCESS);
-
-    SetWindowLongPtrW(
-        g_hDialog,
-        GWLP_WNDPROC,
-        reinterpret_cast<LONG_PTR>(DialogWndProc)
-    );
-
-    g_originalWndProc =
-    reinterpret_cast<WNDPROC>(
-        SetWindowLongPtrW(
-            g_hDialog,
-            GWLP_WNDPROC,
-            reinterpret_cast<LONG_PTR>(DialogWndProc)
-        )
-    );
-
-    if (!g_originalWndProc)
-    {
         Log(
-            "[ERROR] SetWindowLongPtrW failed. Error=" +
+            "[ERROR] CreateSolidBrush failed. Error=" +
             std::to_string(GetLastError())
         );
 
         return 0;
     }
-    
-    Log("[SUCCESS] Classic WNDPROC subclass installed.");
-    Log("[INFO] Waiting for WM_CTLCOLORSTATIC...");
 
-    Log(
-        std::string("[SUBCLASS] SetWindowSubclass result=") +
-        (result ? "TRUE" : "FALSE")
-    );
+    // --------------------------------------------------------
+    // Сохраняем оригинальный WndProc
+    // и устанавливаем наш
+    // --------------------------------------------------------
 
-    if (!result)
+    SetLastError(ERROR_SUCCESS);
+
+    g_originalWndProc =
+        reinterpret_cast<WNDPROC>(
+            SetWindowLongPtrW(
+                g_hDialog,
+                GWLP_WNDPROC,
+                reinterpret_cast<LONG_PTR>(
+                    DialogWndProc
+                )
+            )
+        );
+
+    if (!g_originalWndProc)
     {
+        DWORD error = GetLastError();
+
         Log(
-            "[ERROR] SetWindowSubclass failed. Error=" +
-            std::to_string(GetLastError())
+            "[ERROR] SetWindowLongPtrW failed. Error=" +
+            std::to_string(error)
         );
 
         DeleteObject(g_hDarkBrush);
@@ -309,12 +322,16 @@ DWORD WINAPI InstallThread(LPVOID)
         return 0;
     }
 
-    Log("[SUCCESS] Subclass installed.");
-    Log("[INFO] Waiting for WM_CTLCOLORSTATIC...");
+    Log(
+        "[SUCCESS] Classic WNDPROC subclass installed."
+    );
+
+    Log(
+        "[INFO] Waiting for WM_CTLCOLORSTATIC..."
+    );
 
     return 0;
 }
-
 
 // ------------------------------------------------------------
 // DLL entry
