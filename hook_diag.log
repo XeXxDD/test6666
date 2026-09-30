@@ -1,21 +1,33 @@
 === hook_diag started ===
-[INFO] Current PID: 49472
-[FOUND] Variable: 0x00000000003E052E
-[FOUND] Value:    0x00000000003F05F6
+[INFO] Current PID: 22660
+[FOUND] Variable: 0x00000000005C060E
+[FOUND] Value:    0x0000000000AC086E
 [SUCCESS] Classic WNDPROC subclass installed.
 [INFO] Waiting for WM_CTLCOLORSTATIC...
-[WM_DRAWITEM] hwndItem=0x00000000003E052E class=Button text='Variable'
-[WM_DRAWITEM] hwndItem=0x00000000003F05F6 class=Button text='Value'
-[WM_DRAWITEM] hwndItem=0x00000000003E052E class=Button text='Variable'
-[WM_DRAWITEM] hwndItem=0x00000000003F05F6 class=Button text='Value'
-[WM_DRAWITEM] hwndItem=0x00000000003E052E class=Button text='Variable'
-[WM_DRAWITEM] hwndItem=0x00000000003F05F6 class=Button text='Value'
-[WM_DRAWITEM] hwndItem=0x00000000003E052E class=Button text='1'
-[WM_DRAWITEM] hwndItem=0x00000000003F05F6 class=Button text='Unit'
-[WM_DRAWITEM] hwndItem=0x00000000003F05F6 class=Button text='Unit'
-[WM_DRAWITEM] hwndItem=0x00000000003E052E class=Button text='1'
-[WM_DRAWITEM] hwndItem=0x00000000003F05F6 class=Button text='Unit'
-[WM_DRAWITEM] hwndItem=0x00000000003E052E class=Button text='1'
-[WM_DRAWITEM] hwndItem=0x00000000003F05F6 class=Button text='Unit'
-[WM_DRAWITEM] hwndItem=0x00000000003E052E class=Button text='1'
-[WM_DRAWITEM] hwndItem=0x00000000003F05F6 class=Button text='Unit'
+[WM_DRAWITEM] hwndItem=0x00000000005C060E class=Button text='Variable'
+[WM_DRAWITEM] hwndItem=0x0000000000AC086E class=Button text='Value'
+[WM_DRAWITEM] hwndItem=0x00000000005C060E class=Button text='Variable'
+[WM_DRAWITEM] hwndItem=0x0000000000AC086E class=Button text='Value'
+[WM_DRAWITEM] hwndItem=0x00000000005C060E class=Button text='Variable'
+[WM_DRAWITEM] hwndItem=0x0000000000AC086E class=Button text='Value'
+[WM_DRAWITEM] hwndItem=0x00000000005C060E class=Button text='1'
+[WM_DRAWITEM] hwndItem=0x0000000000AC086E class=Button text='Unit'
+[WM_DRAWITEM] hwndItem=0x0000000000AC086E class=Button text='Unit'
+[WM_DRAWITEM] hwndItem=0x00000000005C060E class=Button text='1'
+[WM_DRAWITEM] hwndItem=0x0000000000AC086E class=Button text='Unit'
+[WM_DRAWITEM] hwndItem=0x00000000004205F6 class=Button text='1'
+[WM_DRAWITEM] hwndItem=0x00000000001D0676 class=Button text='Point'
+[WM_DRAWITEM] hwndItem=0x0000000003080200 class=Button text='270.0'
+[WM_DRAWITEM] hwndItem=0x00000000002A0440 class=Button text='Нет параметров'
+[WM_DRAWITEM] hwndItem=0x00000000005C060E class=Button text='1'
+[WM_DRAWITEM] hwndItem=0x0000000000AC086E class=Button text='Unit'
+[WM_DRAWITEM] hwndItem=0x00000000004205F6 class=Button text='1'
+[WM_DRAWITEM] hwndItem=0x00000000001D0676 class=Button text='Point'
+[WM_DRAWITEM] hwndItem=0x0000000003080200 class=Button text='270.0'
+[WM_DRAWITEM] hwndItem=0x00000000002A0440 class=Button text='Нет параметров'
+[WM_DRAWITEM] hwndItem=0x00000000005C060E class=Button text='1'
+[WM_DRAWITEM] hwndItem=0x0000000000AC086E class=Button text='Unit'
+[WM_DRAWITEM] hwndItem=0x00000000004205F6 class=Button text='1'
+[WM_DRAWITEM] hwndItem=0x00000000001D0676 class=Button text='Point'
+[WM_DRAWITEM] hwndItem=0x0000000003080200 class=Button text='270.0'
+[WM_DRAWITEM] hwndItem=0x00000000002A0440 class=Button text='Нет параметров'
