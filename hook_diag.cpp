@@ -27,8 +27,10 @@ void Log(const std::string& text)
     {
         g_log << text << std::endl;
         g_log.flush();
-    }
+    }    
 }
+
+
 
 std::string HwndToString(HWND hwnd)
 {
@@ -180,6 +182,13 @@ LRESULT CALLBACK DialogWndProc(
                 dis->itemAction
             );
 
+            // НОВОЕ — здесь
+            COLORREF pixel = GetPixel(
+                dis->hDC,
+                dis->rcItem.left,
+                dis->rcItem.top
+            );
+            
             Log(buffer);
         }
     }
