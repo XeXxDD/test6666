@@ -171,10 +171,20 @@ LRESULT CALLBACK DialogWndProc(
             );
         }
     }
-    
+
     if (uMsg == WM_CTLCOLORSTATIC)
     {
         HWND hStatic = reinterpret_cast<HWND>(lParam);
+
+        Log(
+            "[WM_CTLCOLORSTATIC] child=" +
+            HwndToString(hStatic) +
+            " class=" +
+            GetClassNameString(hStatic) +
+            " text='" +
+            GetWindowTextString(hStatic) +
+            "'"
+        );
 
         if (hStatic == g_hSet || hStatic == g_hEquals)
         {
