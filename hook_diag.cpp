@@ -4,6 +4,7 @@
 #include <commctrl.h>
 #include <string>
 #include <fstream>
+#include <sstream>
 
 #pragma comment(lib, "comctl32.lib")
 #pragma comment(lib, "gdi32.lib")
@@ -156,99 +157,120 @@ LRESULT CALLBACK DialogWndProc(
     WPARAM wParam,
     LPARAM lParam)
 {
-    if (uMsg == WM_DRAWITEM)
+if (uMsg == WM_DRAWITEM)
+{
+    auto* dis = reinterpret_cast<DRAWITEMSTRUCT*>(lParam);
+
+    if (dis && dis->hwndItem)
     {
-        auto* dis = reinterpret_cast<DRAWITEMSTRUCT*>(lParam);
+        HWND hwndItem = dis->hwndItem;
 
-        if (dis && dis->hwndItem)
+        LONG_PTR style = GetWindowLongPtrW(
+            hwndItem,
+            GWL_STYLE
+        );
+
+        LONG_PTR exStyle = GetWindowLongPtrW(
+            hwndItem,
+            GWL_EXSTYLE
+        );
+
+        HWND parent = GetParent(hwndItem);
+
+        int ctrlId = GetDlgCtrlID(hwndItem);
+
+        RECT rcScreen{};
+        RECT rcDialog{};
+
+        GetWindowRect(hwndItem, &rcScreen);
+
+        POINT pt{};
+        pt.x = rcScreen.left;
+        pt.y = rcScreen.top;
+
+        if (g_hDialog)
         {
-            HWND hwndItem = dis->hwndItem;
+            ScreenToClient(g_hDialog, &pt);
 
-            LONG_PTR style = GetWindowLongPtrW(
-                hwndItem,
-                GWL_STYLE
-            );
-
-            LONG_PTR exStyle = GetWindowLongPtrW(
-                hwndItem,
-                GWL_EXSTYLE
-            );
-
-            HWND parent = GetParent(hwndItem);
-
-            int ctrlId = GetDlgCtrlID(hwndItem);
-
-            RECT rcScreen{};
-            RECT rcDialog{};
-
-            GetWindowRect(hwndItem, &rcScreen);
-
-            // Переводим левый верхний угол из screen coordinates
-            // в coordinates относительно g_hDialog.
-            POINT pt{};
-            pt.x = rcScreen.left;
-            pt.y = rcScreen.top;
-
-            if (g_hDialog)
-            {
-                ScreenToClient(g_hDialog, &pt);
-
-                rcDialog.left = pt.x;
-                rcDialog.top = pt.y;
-                rcDialog.right = pt.x +
-                    (rcScreen.right - rcScreen.left);
-                rcDialog.bottom = pt.y +
-                    (rcScreen.bottom - rcScreen.top);
-            }
-
-            int width =
-                rcScreen.right - rcScreen.left;
-
-            int height =
-                rcScreen.bottom - rcScreen.top;
-
-            wchar_t text[256]{};
-            GetWindowTextW(
-                hwndItem,
-                text,
-                static_cast<int>(std::size(text))
-            );
-
-            Log(
-                "[WM_DRAWITEM] "
-                "hwnd=0x%p "
-                "text='%ls' "
-                "id=%d "
-                "style=0x%llX "
-                "exStyle=0x%llX "
-                "parent=0x%p "
-                "screen=(%ld,%ld)-(%ld,%ld) "
-                "dialog=(%ld,%ld)-(%ld,%ld) "
-                "size=%dx%d "
-                "itemState=0x%X "
-                "itemAction=0x%X\n",
-                hwndItem,
-                text,
-                ctrlId,
-                static_cast<unsigned long long>(style),
-                static_cast<unsigned long long>(exStyle),
-                parent,
-                rcScreen.left,
-                rcScreen.top,
-                rcScreen.right,
-                rcScreen.bottom,
-                rcDialog.left,
-                rcDialog.top,
-                rcDialog.right,
-                rcDialog.bottom,
-                width,
-                height,
-                dis->itemState,
-                dis->itemAction
-            );
+            rcDialog.left = pt.x;
+            rcDialog.top = pt.y;
+            rcDialog.right =
+                pt.x + (rcScreen.right - rcScreen.left);
+            rcDialog.bottom =
+                pt.y + (rcScreen.bottom - rcScreen.top);
         }
-    }
 
+        int width =
+            rcScreen.right - rcScreen.left;
+
+        int height =
+            rcScreen.bottom - rcScreen.top;
+
+        wchar_t text[256]{};
+
+        GetWindowTextW(
+            hwndItem,
+            text,
+            static_cast<int>(std::size(text))
+        );
+
+        wchar_t className[256]{};
+        GetClassNameW(
+            hwndItem,
+            className,
+            static_cast<int>(std::size(className))
+        );
+
+        wchar_t parentClass[256]{};
+        GetClassNameW(
+            parent,
+            parentClass,
+            static_cast<int>(std::size(parentClass))
+        );
+
+        int parentId = GetDlgCtrlID(parent);
+
+        LONG_PTR parentStyle = GetWindowLongPtrW(
+            parent,
+            GWL_STYLE
+        );
+
+        std::ostringstream ss;
+
+        ss << "[WM_DRAWITEM]"
+           << " hwnd=0x"
+           << std::hex
+           << reinterpret_cast<uintptr_t>(hwndItem)
+           << std::dec
+           << " text='";
+
+        // Временная конвертация wide -> UTF-8/ANSI
+        char textA[512]{};
+
+        WideCharToMultiByte(
+            CP_ACP,
+            0,
+            text,
+            -1,
+            textA,
+            sizeof(textA),
+            nullptr,
+            nullptr
+        );
+
+        ss << textA;
+
+        ss << " class='" << className
+        << "' parentClass='" << parentClass
+        << "' parentId=" << parentId
+        << " parentStyle=0x"
+        << std::hex
+        << static_cast<uintptr_t>(parentStyle)
+        << std::dec;
+
+        Log(ss.str());
+    }
+}
     if (uMsg == WM_CTLCOLORSTATIC)
     {
         HWND hStatic = reinterpret_cast<HWND>(lParam);
