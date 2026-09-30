@@ -237,36 +237,42 @@ if (uMsg == WM_DRAWITEM)
 
         std::ostringstream ss;
 
-        ss << "[WM_DRAWITEM]"
-           << " hwnd=0x"
-           << std::hex
-           << reinterpret_cast<uintptr_t>(hwndItem)
-           << std::dec
-           << " text='";
-
-        // Временная конвертация wide -> UTF-8/ANSI
-        char textA[512]{};
+        char textA[256]{};
+        char classNameA[256]{};
+        char parentClassA[256]{};
 
         WideCharToMultiByte(
-            CP_ACP,
-            0,
-            text,
-            -1,
-            textA,
-            sizeof(textA),
-            nullptr,
-            nullptr
+            CP_ACP, 0,
+            text, -1,
+            textA, sizeof(textA),
+            nullptr, nullptr
         );
 
-        ss << textA;
+        WideCharToMultiByte(
+            CP_ACP, 0,
+            className, -1,
+            classNameA, sizeof(classNameA),
+            nullptr, nullptr
+        );
 
-        ss << " class='" << className
-        << "' parentClass='" << parentClass
-        << "' parentId=" << parentId
-        << " parentStyle=0x"
-        << std::hex
-        << static_cast<uintptr_t>(parentStyle)
-        << std::dec;
+        WideCharToMultiByte(
+            CP_ACP, 0,
+            parentClass, -1,
+            parentClassA, sizeof(parentClassA),
+            nullptr, nullptr
+        );
+
+        ss << "[WM_DRAWITEM]"
+        << " hwnd=0x" << std::hex
+        << reinterpret_cast<uintptr_t>(hwndItem)
+        << " text='" << textA << "'"
+        << " id=" << std::dec << GetDlgCtrlID(hwndItem)
+        << " style=0x" << std::hex << GetWindowLongPtrW(hwndItem, GWL_STYLE)
+        << " exStyle=0x" << GetWindowLongPtrW(hwndItem, GWL_EXSTYLE)
+        << " parent=0x"
+        << reinterpret_cast<uintptr_t>(GetParent(hwndItem))
+        << " class='" << classNameA << "'"
+        << " parentClass='" << parentClassA << "'";
 
         Log(ss.str());
     }
