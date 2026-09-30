@@ -7,68 +7,36 @@
 [WM_CTLCOLORSTATIC] child=0x00000000006808E4 class=Static text=' = '
 [WM_CTLCOLORSTATIC] child=0x0000000000270194 class=Static text='Create '
 [WM_DRAWITEM] hwnd=0x00000000001907CA text='1' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_CTLCOLORSTATIC] child=0x00000000006808E4 class=Static text=' '
 [WM_DRAWITEM] hwnd=0x0000000000610734 text='Unit' style=0x5801400B exStyle=0x0 parent=0x00000000002808AC itemState=0x4 itemAction=0x1
-[WM_DRAWITEM] hwnd=0x0000000000610734 text='Unit' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_CTLCOLORSTATIC] child=0x0000000000270194 class=Static text='Create '
-[WM_CTLCOLORSTATIC] child=0x00000000006808E4 class=Static text=' '
 [WM_CTLCOLORSTATIC] child=0x00000000008A09DA class=Static text=' for player '
 [WM_CTLCOLORSTATIC] child=0x0000000000D904A8 class=Static text=' at '
 [WM_CTLCOLORSTATIC] child=0x00000000003108D8 class=Static text=' facing '
 [WM_CTLCOLORSTATIC] child=0x00000000012509E2 class=Static text=' degrees ('
 [WM_CTLCOLORSTATIC] child=0x000000000027054A class=Static text=')'
-[WM_DRAWITEM] hwnd=0x00000000001907CA text='1' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_DRAWITEM] hwnd=0x0000000000610734 text='Unit' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
 [WM_DRAWITEM] hwnd=0x0000000000B90872 text='1' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
 [WM_DRAWITEM] hwnd=0x00000000006C09CE text='Point' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
 [WM_DRAWITEM] hwnd=0x0000000000250864 text='270.0' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
 [WM_DRAWITEM] hwnd=0x00000000007A06F2 text='Нет параметров' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_CTLCOLORSTATIC] child=0x0000000000270194 class=Static text='Create '
-[WM_CTLCOLORSTATIC] child=0x00000000006808E4 class=Static text=' '
-[WM_CTLCOLORSTATIC] child=0x00000000008A09DA class=Static text=' for player '
-[WM_CTLCOLORSTATIC] child=0x0000000000D904A8 class=Static text=' at '
-[WM_CTLCOLORSTATIC] child=0x00000000003108D8 class=Static text=' facing '
-[WM_CTLCOLORSTATIC] child=0x00000000012509E2 class=Static text=' degrees ('
-[WM_CTLCOLORSTATIC] child=0x000000000027054A class=Static text=')'
-[WM_DRAWITEM] hwnd=0x00000000001907CA text='1' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_DRAWITEM] hwnd=0x0000000000610734 text='Unit' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_DRAWITEM] hwnd=0x0000000000B90872 text='1' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_DRAWITEM] hwnd=0x00000000006C09CE text='Point' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_DRAWITEM] hwnd=0x0000000000250864 text='270.0' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_DRAWITEM] hwnd=0x00000000007A06F2 text='Нет параметров' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_CTLCOLORSTATIC] child=0x0000000000270194 class=Static text='Create '
-[WM_DRAWITEM] hwnd=0x00000000001907CA text='1' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_CTLCOLORSTATIC] child=0x00000000006808E4 class=Static text=' '
-[WM_DRAWITEM] hwnd=0x0000000000610734 text='Unit' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_CTLCOLORSTATIC] child=0x00000000008A09DA class=Static text=' for player '
-[WM_DRAWITEM] hwnd=0x0000000000B90872 text='1' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_CTLCOLORSTATIC] child=0x0000000000D904A8 class=Static text=' at '
-[WM_DRAWITEM] hwnd=0x00000000006C09CE text='Point' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_CTLCOLORSTATIC] child=0x00000000003108D8 class=Static text=' facing '
-[WM_DRAWITEM] hwnd=0x0000000000250864 text='270.0' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_CTLCOLORSTATIC] child=0x00000000012509E2 class=Static text=' degrees ('
-[WM_DRAWITEM] hwnd=0x00000000007A06F2 text='Нет параметров' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_CTLCOLORSTATIC] child=0x000000000027054A class=Static text=')'
-[WM_CTLCOLORSTATIC] child=0x0000000000270194 class=Static text='Create '
-[WM_CTLCOLORSTATIC] child=0x00000000006808E4 class=Static text=' '
-[WM_CTLCOLORSTATIC] child=0x00000000008A09DA class=Static text=' for player '
-[WM_CTLCOLORSTATIC] child=0x0000000000D904A8 class=Static text=' at '
-[WM_CTLCOLORSTATIC] child=0x00000000003108D8 class=Static text=' facing '
-[WM_CTLCOLORSTATIC] child=0x00000000012509E2 class=Static text=' degrees ('
-[WM_CTLCOLORSTATIC] child=0x000000000027054A class=Static text=')'
-[WM_CTLCOLORSTATIC] child=0x0000000000270194 class=Static text='Set '
-[WM_DRAWITEM] hwnd=0x00000000001907CA text='Variable' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_CTLCOLORSTATIC] child=0x00000000006808E4 class=Static text=' = '
-[WM_DRAWITEM] hwnd=0x0000000000610734 text='Value' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_DRAWITEM] hwnd=0x0000000000610734 text='Value' style=0x5801400B exStyle=0x0 parent=0x00000000002808AC itemState=0x4 itemAction=0x1
-[WM_CTLCOLORSTATIC] child=0x00000000006808E4 class=Static text=' = '
-[WM_DRAWITEM] hwnd=0x00000000001907CA text='Variable' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_DRAWITEM] hwnd=0x0000000000610734 text='Value' style=0x5801400B exStyle=0x0 parent=0x00000000002808AC itemState=0x4 itemAction=0x1
-[WM_CTLCOLORSTATIC] child=0x0000000000270194 class=Static text='Set '
-[WM_CTLCOLORSTATIC] child=0x00000000006808E4 class=Static text=' = '
-[WM_DRAWITEM] hwnd=0x00000000001907CA text='Variable' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_DRAWITEM] hwnd=0x0000000000610734 text='Value' style=0x5801400B exStyle=0x0 parent=0x00000000002808AC itemState=0x4 itemAction=0x1
-[WM_CTLCOLORSTATIC] child=0x0000000000270194 class=Static text='Set '
-[WM_DRAWITEM] hwnd=0x00000000001907CA text='Variable' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_CTLCOLORSTATIC] child=0x00000000006808E4 class=Static text=' = '
-[WM_DRAWITEM] hwnd=0x0000000000610734 text='Value' style=0x5801400B exStyle=0x0 parent=0x00000000002808AC itemState=0x4 itemAction=0x1
+[WM_CTLCOLORSTATIC] child=0x000000000113083E class=Button text='По имени'
+[WM_CTLCOLORSTATIC] child=0x00000000007705F0 class=Static text='&Тип:'
+[WM_CTLCOLORSTATIC] child=0x00000000007D071A class=Static text='Тип ссылки'
+[WM_CTLCOLORSTATIC] child=0x00000000005309C8 class=Static text='Требуемый тип'
+[WM_CTLCOLORSTATIC] child=0x00000000002C0548 class=Static text=''
+[WM_CTLCOLORSTATIC] child=0x00000000004807B6 class=Static text=''
+[WM_CTLCOLORSTATIC] child=0x00000000005A0526 class=Button text='Константа'
+[WM_CTLCOLORSTATIC] child=0x00000000001E0806 class=Button text='Массив'
+[WM_CTLCOLORSTATIC] child=0x00000000004E0656 class=Static text='Масштаб:'
+[WM_CTLCOLORSTATIC] child=0x000000000044098C class=Static text='Размер:'
+[WM_CTLCOLORSTATIC] child=0x0000000000B10854 class=Button text='Значение:'
+[WM_CTLCOLORSTATIC] child=0x00000000002C092C class=ComboBox text=''
+[WM_CTLCOLORSTATIC] child=0x00000000002D086A class=Button text='Определяет значение по умолчанию'
+[WM_CTLCOLORSTATIC] child=0x00000000005E07B0 class=Static text='Начальное &значение'
+[WM_CTLCOLORSTATIC] child=0x0000000000350A00 class=ComboBox text='1'
+[WM_CTLCOLORSTATIC] child=0x00000000002E08C6 class=ComboBox text='(Целые значения константы не найдены)'
+[WM_DRAWITEM] hwnd=0x00000000005E0934 text='0' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
+[WM_CTLCOLORSTATIC] child=0x00000000003409E6 class=Static text=''
+[WM_CTLCOLORSTATIC] child=0x00000000007C092A class=Static text=''
+[WM_CTLCOLORSTATIC] child=0x0000000000A806BC class=Static text='Идентификатор с&крипта'
+[WM_CTLCOLORSTATIC] child=0x0000000000850254 class=Edit text='lv_d091D0B5D0B7D18BD0BCD18FD0BDD0BDD0B0D18FD0BFD0B5D180D0B5D0BCD0B5D0BDD0BDD0B0D18F001'
+[WM_CTLCOLORSTATIC] child=0x00000000003505EE class=Button text='Константа:'
+[WM_CTLCOLORSTATIC] child=0x0000000000990876 class=Edit text='1'
