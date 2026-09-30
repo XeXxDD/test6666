@@ -160,36 +160,92 @@ LRESULT CALLBACK DialogWndProc(
     {
         auto* dis = reinterpret_cast<DRAWITEMSTRUCT*>(lParam);
 
-    if (dis && dis->hwndItem)
+        if (dis && dis->hwndItem)
         {
-            HWND hButton = dis->hwndItem;
+            HWND hwndItem = dis->hwndItem;
 
-            LONG_PTR style = GetWindowLongPtrW(hButton, GWL_STYLE);
-            LONG_PTR exStyle = GetWindowLongPtrW(hButton, GWL_EXSTYLE);
+            LONG_PTR style = GetWindowLongPtrW(
+                hwndItem,
+                GWL_STYLE
+            );
 
-            char buffer[512]{};
+            LONG_PTR exStyle = GetWindowLongPtrW(
+                hwndItem,
+                GWL_EXSTYLE
+            );
 
-            sprintf_s(
-                buffer,
-                "[WM_DRAWITEM] hwnd=%s text='%s' style=0x%llX exStyle=0x%llX "
-                "parent=%s itemState=0x%X itemAction=0x%X",
-                HwndToString(hButton).c_str(),
-                GetWindowTextString(hButton).c_str(),
+            HWND parent = GetParent(hwndItem);
+
+            int ctrlId = GetDlgCtrlID(hwndItem);
+
+            RECT rcScreen{};
+            RECT rcDialog{};
+
+            GetWindowRect(hwndItem, &rcScreen);
+
+            // Переводим левый верхний угол из screen coordinates
+            // в coordinates относительно g_hDialog.
+            POINT pt{};
+            pt.x = rcScreen.left;
+            pt.y = rcScreen.top;
+
+            if (g_hDialog)
+            {
+                ScreenToClient(g_hDialog, &pt);
+
+                rcDialog.left = pt.x;
+                rcDialog.top = pt.y;
+                rcDialog.right = pt.x +
+                    (rcScreen.right - rcScreen.left);
+                rcDialog.bottom = pt.y +
+                    (rcScreen.bottom - rcScreen.top);
+            }
+
+            int width =
+                rcScreen.right - rcScreen.left;
+
+            int height =
+                rcScreen.bottom - rcScreen.top;
+
+            wchar_t text[256]{};
+            GetWindowTextW(
+                hwndItem,
+                text,
+                static_cast<int>(std::size(text))
+            );
+
+            Log(
+                "[WM_DRAWITEM] "
+                "hwnd=0x%p "
+                "text='%ls' "
+                "id=%d "
+                "style=0x%llX "
+                "exStyle=0x%llX "
+                "parent=0x%p "
+                "screen=(%ld,%ld)-(%ld,%ld) "
+                "dialog=(%ld,%ld)-(%ld,%ld) "
+                "size=%dx%d "
+                "itemState=0x%X "
+                "itemAction=0x%X\n",
+                hwndItem,
+                text,
+                ctrlId,
                 static_cast<unsigned long long>(style),
                 static_cast<unsigned long long>(exStyle),
-                HwndToString(GetParent(hButton)).c_str(),
+                parent,
+                rcScreen.left,
+                rcScreen.top,
+                rcScreen.right,
+                rcScreen.bottom,
+                rcDialog.left,
+                rcDialog.top,
+                rcDialog.right,
+                rcDialog.bottom,
+                width,
+                height,
                 dis->itemState,
                 dis->itemAction
             );
-
-            // НОВОЕ — здесь
-            COLORREF pixel = GetPixel(
-                dis->hDC,
-                dis->rcItem.left,
-                dis->rcItem.top
-            );
-            
-            Log(buffer);
         }
     }
 
