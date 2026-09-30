@@ -1,42 +1,59 @@
 === hook_diag started ===
-[INFO] Current PID: 78344
-[FOUND] Variable: 0x00000000001907CA
-[FOUND] Value:    0x0000000000610734
+[INFO] Current PID: 47580
+[FOUND] Variable: 0x0000000000D9050C
+[FOUND] Value:    0x00000000003809AC
 [SUCCESS] Classic WNDPROC subclass installed.
 [INFO] Waiting for WM_CTLCOLORSTATIC...
-[WM_CTLCOLORSTATIC] child=0x00000000006808E4 class=Static text=' = '
-[WM_CTLCOLORSTATIC] child=0x0000000000270194 class=Static text='Create '
-[WM_DRAWITEM] hwnd=0x00000000001907CA text='1' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_DRAWITEM] hwnd=0x0000000000610734 text='Unit' style=0x5801400B exStyle=0x0 parent=0x00000000002808AC itemState=0x4 itemAction=0x1
-[WM_CTLCOLORSTATIC] child=0x00000000008A09DA class=Static text=' for player '
-[WM_CTLCOLORSTATIC] child=0x0000000000D904A8 class=Static text=' at '
-[WM_CTLCOLORSTATIC] child=0x00000000003108D8 class=Static text=' facing '
-[WM_CTLCOLORSTATIC] child=0x00000000012509E2 class=Static text=' degrees ('
-[WM_CTLCOLORSTATIC] child=0x000000000027054A class=Static text=')'
-[WM_DRAWITEM] hwnd=0x0000000000B90872 text='1' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_DRAWITEM] hwnd=0x00000000006C09CE text='Point' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_DRAWITEM] hwnd=0x0000000000250864 text='270.0' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_DRAWITEM] hwnd=0x00000000007A06F2 text='Нет параметров' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_CTLCOLORSTATIC] child=0x000000000113083E class=Button text='По имени'
-[WM_CTLCOLORSTATIC] child=0x00000000007705F0 class=Static text='&Тип:'
-[WM_CTLCOLORSTATIC] child=0x00000000007D071A class=Static text='Тип ссылки'
-[WM_CTLCOLORSTATIC] child=0x00000000005309C8 class=Static text='Требуемый тип'
-[WM_CTLCOLORSTATIC] child=0x00000000002C0548 class=Static text=''
-[WM_CTLCOLORSTATIC] child=0x00000000004807B6 class=Static text=''
-[WM_CTLCOLORSTATIC] child=0x00000000005A0526 class=Button text='Константа'
-[WM_CTLCOLORSTATIC] child=0x00000000001E0806 class=Button text='Массив'
-[WM_CTLCOLORSTATIC] child=0x00000000004E0656 class=Static text='Масштаб:'
-[WM_CTLCOLORSTATIC] child=0x000000000044098C class=Static text='Размер:'
-[WM_CTLCOLORSTATIC] child=0x0000000000B10854 class=Button text='Значение:'
-[WM_CTLCOLORSTATIC] child=0x00000000002C092C class=ComboBox text=''
-[WM_CTLCOLORSTATIC] child=0x00000000002D086A class=Button text='Определяет значение по умолчанию'
-[WM_CTLCOLORSTATIC] child=0x00000000005E07B0 class=Static text='Начальное &значение'
-[WM_CTLCOLORSTATIC] child=0x0000000000350A00 class=ComboBox text='1'
-[WM_CTLCOLORSTATIC] child=0x00000000002E08C6 class=ComboBox text='(Целые значения константы не найдены)'
-[WM_DRAWITEM] hwnd=0x00000000005E0934 text='0' style=0x5001400B exStyle=0x0 parent=0x00000000002808AC itemState=0x0 itemAction=0x1
-[WM_CTLCOLORSTATIC] child=0x00000000003409E6 class=Static text=''
-[WM_CTLCOLORSTATIC] child=0x00000000007C092A class=Static text=''
-[WM_CTLCOLORSTATIC] child=0x0000000000A806BC class=Static text='Идентификатор с&крипта'
-[WM_CTLCOLORSTATIC] child=0x0000000000850254 class=Edit text='lv_d091D0B5D0B7D18BD0BCD18FD0BDD0BDD0B0D18FD0BFD0B5D180D0B5D0BCD0B5D0BDD0BDD0B0D18F001'
-[WM_CTLCOLORSTATIC] child=0x00000000003505EE class=Button text='Константа:'
-[WM_CTLCOLORSTATIC] child=0x0000000000990876 class=Edit text='1'
+[WM_CTLCOLORSTATIC] child=0x00000000002408F2 class=Static text='Set '
+[WM_CTLCOLORSTATIC] child=0x0000000000150A5E class=Static text=' = '
+[WM_CTLCOLORSTATIC] child=0x00000000002408F2 class=Static text='Set default melee options for all players'
+[WM_DRAWITEM] hwnd=0xd9050c text='Variable' id=471 style=0x5001400b exStyle=0x0 parent=0xd7081c screen=(435,931)-(514,960) dialog=(421,880)-(500,909) size=79x29 itemState=0x0 itemAction=0x1
+[WM_DRAWITEM] hwnd=0x3809ac text='Value' id=473 style=0x5801400b exStyle=0x0 parent=0xd7081c screen=(540,931)-(595,960) dialog=(526,880)-(581,909) size=55x29 itemState=0x4 itemAction=0x1
+[WM_CTLCOLORSTATIC] child=0x0000000000150A54 class=Static text='Идентификатор с&крипта'
+[WM_CTLCOLORSTATIC] child=0x0000000001C104F6 class=Button text='По имени'
+[WM_CTLCOLORSTATIC] child=0x0000000000C30872 class=Static text='&Тип:'
+[WM_CTLCOLORSTATIC] child=0x00000000007509FA class=Static text='Тип ссылки'
+[WM_CTLCOLORSTATIC] child=0x00000000005A08A8 class=Static text='Требуемый тип'
+[WM_CTLCOLORSTATIC] child=0x00000000003008AC class=Button text='Константа'
+[WM_CTLCOLORSTATIC] child=0x00000000005B06C0 class=Button text='Массив'
+[WM_CTLCOLORSTATIC] child=0x00000000005904B6 class=Static text='Масштаб:'
+[WM_CTLCOLORSTATIC] child=0x00000000008B0254 class=Static text='Размер:'
+[WM_CTLCOLORSTATIC] child=0x0000000000370504 class=Button text='Значение:'
+[WM_CTLCOLORSTATIC] child=0x000000000019074C class=Button text='Константа:'
+[WM_CTLCOLORSTATIC] child=0x0000000000680734 class=Static text=''
+[WM_CTLCOLORSTATIC] child=0x00000000007E093C class=Static text=''
+[WM_CTLCOLORSTATIC] child=0x0000000000250942 class=ComboBox text=''
+[WM_CTLCOLORSTATIC] child=0x00000000005E0526 class=Button text='Определяет значение по умолчанию'
+[WM_CTLCOLORSTATIC] child=0x00000000007E06F2 class=Static text='Начальное &значение'
+[WM_CTLCOLORSTATIC] child=0x0000000000220936 class=ComboBox text='1'
+[WM_CTLCOLORSTATIC] child=0x00000000001B0A5A class=ComboBox text='(Целые значения константы не найдены)'
+[WM_DRAWITEM] hwnd=0x520656 text='0' id=625 style=0x5001400b exStyle=0x0 parent=0xd7081c screen=(16,84)-(28,113) dialog=(2,33)-(14,62) size=12x29 itemState=0x300 itemAction=0x1
+[WM_CTLCOLORSTATIC] child=0x0000000000AC06BC class=Static text=''
+[WM_CTLCOLORSTATIC] child=0x00000000007009CE class=Static text=''
+[WM_CTLCOLORSTATIC] child=0x00000000006E09F6 class=Edit text='lv_d091D0B5D0B7D18BD0BCD18FD0BDD0BDD0B0D18FD0BFD0B5D180D0B5D0BCD0B5D0BDD0BDD0B0D18F001'
+[WM_CTLCOLORSTATIC] child=0x0000000000AD06B8 class=Edit text='1'
+[WM_DRAWITEM] hwnd=0x520656 text='0' id=625 style=0x5001400b exStyle=0x0 parent=0xd7081c screen=(1776,929)-(1788,958) dialog=(1762,878)-(1774,907) size=12x29 itemState=0x300 itemAction=0x1
+[WM_DRAWITEM] hwnd=0x520656 text='0' id=625 style=0x5001400b exStyle=0x0 parent=0xd7081c screen=(1456,929)-(1468,958) dialog=(1442,878)-(1454,907) size=12x29 itemState=0x300 itemAction=0x1
+[WM_DRAWITEM] hwnd=0x520656 text='0' id=625 style=0x5001400b exStyle=0x0 parent=0xd7081c screen=(1456,914)-(1468,943) dialog=(1442,863)-(1454,892) size=12x29 itemState=0x300 itemAction=0x1
+[WM_CTLCOLORSTATIC] child=0x00000000006B0680 class=Static text=''
+[WM_DRAWITEM] hwnd=0xd9050c text='Variable' id=471 style=0x5001400b exStyle=0x0 parent=0xd7081c screen=(435,931)-(514,960) dialog=(421,880)-(500,909) size=79x29 itemState=0x300 itemAction=0x1
+[WM_DRAWITEM] hwnd=0x3809ac text='Value' id=473 style=0x5801400b exStyle=0x0 parent=0xd7081c screen=(540,931)-(595,960) dialog=(526,880)-(581,909) size=55x29 itemState=0x304 itemAction=0x1
+[WM_CTLCOLORSTATIC] child=0x0000000001240742 class=Static text=' for player '
+[WM_DRAWITEM] hwnd=0x2908b4 text='1' id=475 style=0x5001400b exStyle=0x0 parent=0xd7081c screen=(629,931)-(641,960) dialog=(615,880)-(627,909) size=12x29 itemState=0x300 itemAction=0x1
+[WM_CTLCOLORSTATIC] child=0x0000000000450514 class=Static text=' at '
+[WM_DRAWITEM] hwnd=0x2e0884 text='Point' id=477 style=0x5001400b exStyle=0x0 parent=0xd7081c screen=(673,931)-(722,960) dialog=(659,880)-(708,909) size=49x29 itemState=0x300 itemAction=0x1
+[WM_CTLCOLORSTATIC] child=0x0000000000BB064C class=Static text=' facing '
+[WM_DRAWITEM] hwnd=0xd505f8 text='270.0' id=479 style=0x5001400b exStyle=0x0 parent=0xd7081c screen=(794,931)-(848,960) dialog=(780,880)-(834,909) size=54x29 itemState=0x300 itemAction=0x1
+[WM_CTLCOLORSTATIC] child=0x0000000000140A64 class=Static text=' degrees ('
+[WM_DRAWITEM] hwnd=0x360814 text='Нет параметров' id=481 style=0x5001400b exStyle=0x0 parent=0xd7081c screen=(947,931)-(1110,960) dialog=(933,880)-(1096,909) size=163x29 itemState=0x300 itemAction=0x1
+[WM_CTLCOLORSTATIC] child=0x00000000004F0856 class=Static text=')'
+[WM_CTLCOLORSTATIC] child=0x00000000002408F2 class=Static text='Create '
+[WM_CTLCOLORSTATIC] child=0x0000000000150A5E class=Static text=' '
+[WM_DRAWITEM] hwnd=0xd9050c text='1' id=471 style=0x5001400b exStyle=0x0 parent=0xd7081c screen=(467,931)-(479,960) dialog=(453,880)-(465,909) size=12x29 itemState=0x300 itemAction=0x1
+[WM_DRAWITEM] hwnd=0x3809ac text='Unit' id=473 style=0x5001400b exStyle=0x0 parent=0xd7081c screen=(487,931)-(525,960) dialog=(473,880)-(511,909) size=38x29 itemState=0x300 itemAction=0x1
+[WM_DRAWITEM] hwnd=0xd9050c text='1' id=471 style=0x5001400b exStyle=0x0 parent=0xd7081c screen=(467,931)-(479,960) dialog=(453,880)-(465,909) size=12x29 itemState=0x310 itemAction=0x4
+[WM_DRAWITEM] hwnd=0x3809ac text='Unit' id=473 style=0x5001400b exStyle=0x0 parent=0xd7081c screen=(487,931)-(525,960) dialog=(473,880)-(511,909) size=38x29 itemState=0x310 itemAction=0x4
+[WM_DRAWITEM] hwnd=0x2908b4 text='1' id=475 style=0x5001400b exStyle=0x0 parent=0xd7081c screen=(629,931)-(641,960) dialog=(615,880)-(627,909) size=12x29 itemState=0x310 itemAction=0x4
+[WM_DRAWITEM] hwnd=0x2e0884 text='Point' id=477 style=0x5001400b exStyle=0x0 parent=0xd7081c screen=(673,931)-(722,960) dialog=(659,880)-(708,909) size=49x29 itemState=0x310 itemAction=0x4
+[WM_DRAWITEM] hwnd=0xd505f8 text='270.0' id=479 style=0x5001400b exStyle=0x0 parent=0xd7081c screen=(794,931)-(848,960) dialog=(780,880)-(834,909) size=54x29 itemState=0x310 itemAction=0x4
+[WM_DRAWITEM] hwnd=0x360814 text='Нет параметров' id=481 style=0x5001400b exStyle=0x0 parent=0xd7081c screen=(947,931)-(1110,960) dialog=(933,880)-(1096,909) size=163x29 itemState=0x310 itemAction=0x4
