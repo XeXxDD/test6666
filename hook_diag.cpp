@@ -158,17 +158,29 @@ LRESULT CALLBACK DialogWndProc(
     {
         auto* dis = reinterpret_cast<DRAWITEMSTRUCT*>(lParam);
 
-        if (dis && dis->hwndItem)
+    if (dis && dis->hwndItem)
         {
-            Log(
-                "[WM_DRAWITEM] hwndItem=" +
-                HwndToString(dis->hwndItem) +
-                " class=" +
-                GetClassNameString(dis->hwndItem) +
-                " text='" +
-                GetWindowTextString(dis->hwndItem) +
-                "'"
+            HWND hButton = dis->hwndItem;
+
+            LONG_PTR style = GetWindowLongPtrW(hButton, GWL_STYLE);
+            LONG_PTR exStyle = GetWindowLongPtrW(hButton, GWL_EXSTYLE);
+
+            char buffer[512]{};
+
+            sprintf_s(
+                buffer,
+                "[WM_DRAWITEM] hwnd=%s text='%s' style=0x%llX exStyle=0x%llX "
+                "parent=%s itemState=0x%X itemAction=0x%X",
+                HwndToString(hButton).c_str(),
+                GetWindowTextString(hButton).c_str(),
+                static_cast<unsigned long long>(style),
+                static_cast<unsigned long long>(exStyle),
+                HwndToString(GetParent(hButton)).c_str(),
+                dis->itemState,
+                dis->itemAction
             );
+
+            Log(buffer);
         }
     }
 
@@ -186,7 +198,7 @@ LRESULT CALLBACK DialogWndProc(
             "'"
         );
 
-        if (hStatic == g_hSet || hStatic == g_hEquals)
+        if (GetParent(hStatic) == g_hDialog)
         {
             HDC hdc = reinterpret_cast<HDC>(wParam);
 
