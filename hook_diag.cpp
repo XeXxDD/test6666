@@ -157,126 +157,48 @@ LRESULT CALLBACK DialogWndProc(
     WPARAM wParam,
     LPARAM lParam)
 {
-if (uMsg == WM_DRAWITEM)
-{
-    auto* dis = reinterpret_cast<DRAWITEMSTRUCT*>(lParam);
-
-    if (dis && dis->hwndItem)
+    if (uMsg == WM_DRAWITEM)
     {
-        HWND hwndItem = dis->hwndItem;
+        DRAWITEMSTRUCT* dis =
+            reinterpret_cast<DRAWITEMSTRUCT*>(lParam);
 
-        LONG_PTR style = GetWindowLongPtrW(
-            hwndItem,
-            GWL_STYLE
-        );
-
-        LONG_PTR exStyle = GetWindowLongPtrW(
-            hwndItem,
-            GWL_EXSTYLE
-        );
-
-        HWND parent = GetParent(hwndItem);
-
-        int ctrlId = GetDlgCtrlID(hwndItem);
-
-        RECT rcScreen{};
-        RECT rcDialog{};
-
-        GetWindowRect(hwndItem, &rcScreen);
-
-        POINT pt{};
-        pt.x = rcScreen.left;
-        pt.y = rcScreen.top;
-
-        if (g_hDialog)
+        if (dis && dis->CtlType == ODT_BUTTON)
         {
-            ScreenToClient(g_hDialog, &pt);
+            HWND hButton = dis->hwndItem;
 
-            rcDialog.left = pt.x;
-            rcDialog.top = pt.y;
-            rcDialog.right =
-                pt.x + (rcScreen.right - rcScreen.left);
-            rcDialog.bottom =
-                pt.y + (rcScreen.bottom - rcScreen.top);
+            char classNameA[64]{};
+            GetClassNameA(hButton, classNameA, sizeof(classNameA));
+
+            if (GetParent(hButton) == g_hDialog &&
+                (GetWindowLongPtrW(hButton, GWL_STYLE) & BS_OWNERDRAW) != 0)
+            {
+                std::ostringstream ss;
+
+                char textA[256]{};
+                GetWindowTextA(hButton, textA, sizeof(textA));
+
+                ss << "[OWNERDRAW_FILTER]"
+                << " hwnd=0x" << std::hex
+                << reinterpret_cast<uintptr_t>(hButton)
+                << std::dec
+                << " text='" << textA << "'"
+                << " id=" << GetDlgCtrlID(hButton)
+                << " style=0x" << std::hex
+                << GetWindowLongPtrW(hButton, GWL_STYLE)
+                << std::dec
+                << " state=0x" << std::hex
+                << dis->itemState
+                << std::dec;
+
+                Log(ss.str());
+            }
         }
 
-        int width =
-            rcScreen.right - rcScreen.left;
-
-        int height =
-            rcScreen.bottom - rcScreen.top;
-
-        wchar_t text[256]{};
-
-        GetWindowTextW(
-            hwndItem,
-            text,
-            static_cast<int>(std::size(text))
-        );
-
-        wchar_t className[256]{};
-        GetClassNameW(
-            hwndItem,
-            className,
-            static_cast<int>(std::size(className))
-        );
-
-        wchar_t parentClass[256]{};
-        GetClassNameW(
-            parent,
-            parentClass,
-            static_cast<int>(std::size(parentClass))
-        );
-
-        int parentId = GetDlgCtrlID(parent);
-
-        LONG_PTR parentStyle = GetWindowLongPtrW(
-            parent,
-            GWL_STYLE
-        );
-
-        std::ostringstream ss;
-
-        char textA[256]{};
-        char classNameA[256]{};
-        char parentClassA[256]{};
-
-        WideCharToMultiByte(
-            CP_ACP, 0,
-            text, -1,
-            textA, sizeof(textA),
-            nullptr, nullptr
-        );
-
-        WideCharToMultiByte(
-            CP_ACP, 0,
-            className, -1,
-            classNameA, sizeof(classNameA),
-            nullptr, nullptr
-        );
-
-        WideCharToMultiByte(
-            CP_ACP, 0,
-            parentClass, -1,
-            parentClassA, sizeof(parentClassA),
-            nullptr, nullptr
-        );
-
-        ss << "[WM_DRAWITEM]"
-        << " hwnd=0x" << std::hex
-        << reinterpret_cast<uintptr_t>(hwndItem)
-        << " text='" << textA << "'"
-        << " id=" << std::dec << GetDlgCtrlID(hwndItem)
-        << " style=0x" << std::hex << GetWindowLongPtrW(hwndItem, GWL_STYLE)
-        << " exStyle=0x" << GetWindowLongPtrW(hwndItem, GWL_EXSTYLE)
-        << " parent=0x"
-        << reinterpret_cast<uintptr_t>(GetParent(hwndItem))
-        << " class='" << classNameA << "'"
-        << " parentClass='" << parentClassA << "'";
-
-        Log(ss.str());
+        // НИЧЕГО НЕ ВОЗВРАЩАЕМ И НЕ РИСУЕМ.
+        // Обработка WM_DRAWITEM продолжается дальше
+        // по существующему коду.
     }
-}
+    
     if (uMsg == WM_CTLCOLORSTATIC)
     {
         HWND hStatic = reinterpret_cast<HWND>(lParam);

@@ -1,73 +1,30 @@
 === hook_diag started ===
-[INFO] Current PID: 17804
-[FOUND] Variable: 0x0000000000AE0580
-[FOUND] Value:    0x0000000000540536
+[INFO] Current PID: 53092
+[FOUND] Variable: 0x00000000005405BC
+[FOUND] Value:    0x0000000000080416
 [SUCCESS] Classic WNDPROC subclass installed.
 [INFO] Waiting for WM_CTLCOLORSTATIC...
-[WM_CTLCOLORSTATIC] child=0x000000000096021A class=Static text='Set '
-[WM_CTLCOLORSTATIC] child=0x0000000000A20582 class=Static text=' = '
-[WM_CTLCOLORSTATIC] child=0x000000000096021A class=Static text='Set default melee options for all players'
-[WM_DRAWITEM] hwnd=0xae0580 text='Variable class='0000001A1573DA40' parentClass='0000001A1573DC40' parentId=526960 parentStyle=0x14cf0004
-[WM_DRAWITEM] hwnd=0x540536 text='Value class='0000001A1573DA40' parentClass='0000001A1573DC40' parentId=526960 parentStyle=0x14cf0004
-[WM_DRAWITEM] hwnd=0xae0580 text='Variable class='0000001A1573D870' parentClass='0000001A1573DA70' parentId=526960 parentStyle=0x14cf0004
-[WM_DRAWITEM] hwnd=0x540536 text='Value class='0000001A1573D870' parentClass='0000001A1573DA70' parentId=526960 parentStyle=0x14cf0004
-[WM_DRAWITEM] hwnd=0xae0580 text='Variable class='0000001A1573E1D0' parentClass='0000001A1573E3D0' parentId=526960 parentStyle=0x14cf0004
-[WM_DRAWITEM] hwnd=0x540536 text='Value class='0000001A1573E1D0' parentClass='0000001A1573E3D0' parentId=526960 parentStyle=0x14cf0004
-[WM_CTLCOLORSTATIC] child=0x0000000000B802AE class=Static text=' for player '
-[WM_DRAWITEM] hwnd=0x9e04ea text='1 class='0000001A1573C7E0' parentClass='0000001A1573C9E0' parentId=526960 parentStyle=0x1ccf0004
-[WM_CTLCOLORSTATIC] child=0x00000000005D049A class=Static text=' at '
-[WM_DRAWITEM] hwnd=0x7e0862 text='Point class='0000001A1573CC10' parentClass='0000001A1573CE10' parentId=526960 parentStyle=0x1ccf0004
-[WM_CTLCOLORSTATIC] child=0x0000000000080A62 class=Static text=' facing '
-[WM_DRAWITEM] hwnd=0x11089c text='270.0 class='0000001A1573C7E0' parentClass='0000001A1573C9E0' parentId=526960 parentStyle=0x1ccf0004
-[WM_CTLCOLORSTATIC] child=0x0000000000AE063A class=Static text=' degrees ('
-[WM_DRAWITEM] hwnd=0x93057e text='Нет параметров class='0000001A1573C7E0' parentClass='0000001A1573C9E0' parentId=526960 parentStyle=0x1ccf0004
-[WM_CTLCOLORSTATIC] child=0x00000000006F06F8 class=Static text=')'
-[WM_CTLCOLORSTATIC] child=0x000000000096021A class=Static text='Create '
-[WM_CTLCOLORSTATIC] child=0x0000000000A20582 class=Static text=' '
-[WM_DRAWITEM] hwnd=0xae0580 text='1 class='0000001A1573D490' parentClass='0000001A1573D690' parentId=526960 parentStyle=0x1ccf0004
-[WM_DRAWITEM] hwnd=0x540536 text='Unit class='0000001A1573D490' parentClass='0000001A1573D690' parentId=526960 parentStyle=0x1ccf0004
-[WM_DRAWITEM] hwnd=0x9e04ea text='1 class='0000001A1573D490' parentClass='0000001A1573D690' parentId=526960 parentStyle=0x1ccf0004
-[WM_DRAWITEM] hwnd=0x7e0862 text='Point class='0000001A1573D490' parentClass='0000001A1573D690' parentId=526960 parentStyle=0x1ccf0004
-[WM_DRAWITEM] hwnd=0x11089c text='270.0 class='0000001A1573D490' parentClass='0000001A1573D690' parentId=526960 parentStyle=0x1ccf0004
-[WM_DRAWITEM] hwnd=0x93057e text='Нет параметров class='0000001A1573D490' parentClass='0000001A1573D690' parentId=526960 parentStyle=0x1ccf0004
-[WM_CTLCOLORSTATIC] child=0x0000000000060A60 class=Static text=''
-[WM_DRAWITEM] hwnd=0xae0580 text='1 class='0000001A1573E1D0' parentClass='0000001A1573E3D0' parentId=526960 parentStyle=0x14cf0004
-[WM_DRAWITEM] hwnd=0x540536 text='Unit class='0000001A1573E1D0' parentClass='0000001A1573E3D0' parentId=526960 parentStyle=0x14cf0004
-[WM_DRAWITEM] hwnd=0x9e04ea text='1 class='0000001A1573E1D0' parentClass='0000001A1573E3D0' parentId=526960 parentStyle=0x14cf0004
-[WM_DRAWITEM] hwnd=0x7e0862 text='Point class='0000001A1573E1D0' parentClass='0000001A1573E3D0' parentId=526960 parentStyle=0x14cf0004
-[WM_DRAWITEM] hwnd=0x11089c text='270.0 class='0000001A1573E1D0' parentClass='0000001A1573E3D0' parentId=526960 parentStyle=0x14cf0004
-[WM_DRAWITEM] hwnd=0x93057e text='Нет параметров class='0000001A1573E1D0' parentClass='0000001A1573E3D0' parentId=526960 parentStyle=0x14cf0004
-[WM_CTLCOLORSTATIC] child=0x00000000007D06D0 class=Static text='Идентификатор с&крипта'
-[WM_CTLCOLORSTATIC] child=0x0000000000150A3C class=Static text=''
-[WM_CTLCOLORSTATIC] child=0x000000000027046A class=Static text=''
-[WM_CTLCOLORSTATIC] child=0x0000000000220A26 class=Static text=''
-[WM_CTLCOLORSTATIC] child=0x0000000000140A42 class=Static text=''
-[WM_CTLCOLORSTATIC] child=0x00000000003A089E class=Static text=''
-[WM_CTLCOLORSTATIC] child=0x00000000002304CA class=Button text='По имени'
-[WM_CTLCOLORSTATIC] child=0x0000000000330104 class=Static text='&Тип:'
-[WM_CTLCOLORSTATIC] child=0x00000000003008F2 class=Static text='Тип ссылки'
-[WM_CTLCOLORSTATIC] child=0x00000000002908AE class=Static text='Требуемый тип'
-[WM_CTLCOLORSTATIC] child=0x0000000000400790 class=Button text='Константа'
-[WM_CTLCOLORSTATIC] child=0x00000000004805BC class=Button text='Массив'
-[WM_CTLCOLORSTATIC] child=0x0000000000420A00 class=Static text='Масштаб:'
-[WM_CTLCOLORSTATIC] child=0x00000000005907D2 class=Static text='Размер:'
-[WM_CTLCOLORSTATIC] child=0x0000000000B306BC class=Button text='Значение:'
-[WM_CTLCOLORSTATIC] child=0x00000000012C07B8 class=Button text='Константа:'
-[WM_CTLCOLORSTATIC] child=0x00000000006D0526 class=Static text=''
-[WM_CTLCOLORSTATIC] child=0x00000000010C05FA class=Static text=''
-[WM_CTLCOLORSTATIC] child=0x00000000040E0466 class=ComboBox text=''
-[WM_CTLCOLORSTATIC] child=0x00000000005F0938 class=Button text='Определяет значение по умолчанию'
-[WM_CTLCOLORSTATIC] child=0x00000000007709CE class=Static text='Начальное &значение'
-[WM_CTLCOLORSTATIC] child=0x00000000013A09E2 class=ComboBox text='1'
-[WM_CTLCOLORSTATIC] child=0x00000000011505FE class=ComboBox text='(Целые значения константы не найдены)'
-[WM_DRAWITEM] hwnd=0x7805d8 text='0 class='0000001A1573B5B0' parentClass='0000001A1573B7B0' parentId=526960 parentStyle=0x14cf0004
-[WM_CTLCOLORSTATIC] child=0x00000000001F074C class=Static text=''
-[WM_CTLCOLORSTATIC] child=0x0000000003710314 class=Edit text='lv_d091D0B5D0B7D18BD0BCD18FD0BDD0BDD0B0D18FD0BFD0B5D180D0B5D0BCD0B5D0BDD0BDD0B0D18F001'
-[WM_CTLCOLORSTATIC] child=0x0000000000C3072E class=Edit text='1'
-[WM_DRAWITEM] hwnd=0x7805d8 text='0 class='0000001A1573B8F0' parentClass='0000001A1573BAF0' parentId=526960 parentStyle=0x14cf0004
-[WM_DRAWITEM] hwnd=0x7805d8 text='0 class='0000001A1573ABD0' parentClass='0000001A1573ADD0' parentId=526960 parentStyle=0x14cf0004
-[WM_DRAWITEM] hwnd=0x7805d8 text='0 class='0000001A1573BC60' parentClass='0000001A1573BE60' parentId=526960 parentStyle=0x14cf0004
-[WM_DRAWITEM] hwnd=0x7805d8 text='0 class='0000001A1573BD10' parentClass='0000001A1573BF10' parentId=526960 parentStyle=0x14cf0004
-[WM_DRAWITEM] hwnd=0x7805d8 text='0 class='0000001A1573AF50' parentClass='0000001A1573B150' parentId=526960 parentStyle=0x14cf0004
-[WM_DRAWITEM] hwnd=0x7805d8 text='0 class='0000001A1573BCC0' parentClass='0000001A1573BEC0' parentId=526960 parentStyle=0x14cf0004
-[WM_DRAWITEM] hwnd=0x7805d8 text='0 class='0000001A1573E1D0' parentClass='0000001A1573E3D0' parentId=526960 parentStyle=0x14cf0004
+[OWNERDRAW_FILTER] hwnd=0x5405bc text='1' id=471 style=0x5001400b state=0x0
+[OWNERDRAW_FILTER] hwnd=0x80416 text='Unit' id=473 style=0x5801400b state=0x4
+[OWNERDRAW_FILTER] hwnd=0x3a0806 text='1' id=475 style=0x5001400b state=0x300
+[OWNERDRAW_FILTER] hwnd=0xa708e4 text='Point' id=477 style=0x5001400b state=0x300
+[OWNERDRAW_FILTER] hwnd=0x910862 text='270.0' id=479 style=0x5001400b state=0x300
+[OWNERDRAW_FILTER] hwnd=0x18d0646 text='Нет параметров' id=481 style=0x5001400b state=0x300
+[OWNERDRAW_FILTER] hwnd=0x80416 text='Unit' id=473 style=0x5001400b state=0x300
+[OWNERDRAW_FILTER] hwnd=0x5405bc text='1' id=471 style=0x5001400b state=0x300
+[OWNERDRAW_FILTER] hwnd=0x5405bc text='Variable' id=471 style=0x5001400b state=0x300
+[OWNERDRAW_FILTER] hwnd=0x80416 text='Value' id=473 style=0x5001400b state=0x300
+[OWNERDRAW_FILTER] hwnd=0x80416 text='Value' id=473 style=0x5801400b state=0x304
+[WM_CTLCOLORSTATIC] child=0x0000000000120784 class=Button text='По имени'
+[WM_CTLCOLORSTATIC] child=0x0000000000060412 class=Button text='Константа'
+[WM_CTLCOLORSTATIC] child=0x0000000000280714 class=Button text='Массив'
+[WM_CTLCOLORSTATIC] child=0x00000000000A0A90 class=Button text='Значение:'
+[WM_CTLCOLORSTATIC] child=0x00000000005C08C2 class=Button text='Константа:'
+[WM_CTLCOLORSTATIC] child=0x00000000007F0916 class=ComboBox text=''
+[WM_CTLCOLORSTATIC] child=0x0000000000090AA0 class=Button text='Определяет значение по умолчанию'
+[WM_CTLCOLORSTATIC] child=0x00000000000A058E class=ComboBox text='1'
+[WM_CTLCOLORSTATIC] child=0x0000000000350A38 class=ComboBox text='(Целые значения константы не найдены)'
+[OWNERDRAW_FILTER] hwnd=0x5096e text='0' id=625 style=0x5001400b state=0x300
+[WM_CTLCOLORSTATIC] child=0x00000000012804BA class=Edit text='lv_d09'
+[WM_CTLCOLORSTATIC] child=0x0000000000180A9A class=Edit text='1'
+[WM_CTLCOLORSTATIC] child=0x00000000012804BA class=Edit text='lv_d09'
