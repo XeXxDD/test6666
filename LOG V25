@@ -1,93 +1,0 @@
-=== hook_diag started ===
-[INFO] Current PID: 25668
-[FOUND] Variable: 0x00000000003004CC
-[FOUND] Value:    0x0000000000200714
-[SUCCESS] Classic WNDPROC subclass installed.
-[INFO] Waiting for WM_CTLCOLORSTATIC...
-[WM_CTLCOLORBTN] owner-draw button
-[WM_CTLCOLORBTN] button=00000000003004CC hdc=0000000025011378
-[WM_DRAWITEM_STATE_TEST] button=00000000003004CC state_before=0x0 rc=(0,0)-(12,29)
-[V22_THEME] button=00000000003004CC hTheme=0000000000040002 theme_open=YES
-[V24_PIXELS] button=0x00000000003004CC rc=(0,0)-(12,29)
-[V24_PIXELS] nonDark=67 light=0 brightest=(я,,) at=(4,9)
-[V24_PIXELS] samples: center=(™,, ) topLeft=(,,) bottomRight=(,,)
-[WM_DRAWITEM_DC] button=00000000003004CC hdc=0000000025011378 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=ffffffffe70a00e4 fontAfter=ffffffffe70a00e4 brushBefore=7b100bd7 brushAfter=7b100bd7 penBefore=b00017 penAfter=b00017 bitmapBefore=fffffffffe050b66 bitmapAfter=fffffffffe050b66 bkModeBefore=2 bkModeAfter=2
-[WM_CTLCOLORBTN] button=0000000000200714 hdc=0000000025011378
-[WM_DRAWITEM_STATE_TEST] button=0000000000200714 state_before=0x4 rc=(0,0)-(38,29)
-[V22_THEME] button=0000000000200714 hTheme=0000000000040002 theme_open=YES
-[V24_PIXELS] button=0x0000000000200714 rc=(0,0)-(38,29)
-[V24_PIXELS] nonDark=309 light=0 brightest=(@,@,Ђ) at=(2,5)
-[V24_PIXELS] samples: center=(,,) topLeft=(,,) bottomRight=(,,)
-[WM_DRAWITEM_DC] button=0000000000200714 hdc=0000000025011378 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=ffffffffe70a00e4 fontAfter=ffffffffe70a00e4 brushBefore=7b100bd7 brushAfter=7b100bd7 penBefore=b00017 penAfter=b00017 bitmapBefore=fffffffffe050b66 bitmapAfter=fffffffffe050b66 bkModeBefore=2 bkModeAfter=2
-[WM_CTLCOLORBTN] button=0000000000200714 hdc=FFFFFFFFB0011205
-[WM_DRAWITEM_STATE_TEST] button=0000000000200714 state_before=0x0 rc=(0,0)-(38,29)
-[V24_PIXELS] nonDark=274 light=0 brightest=(я,
-,) at=(3,5)
-[WM_DRAWITEM_DC] button=0000000000200714 hdc=FFFFFFFFB0011205 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=ffffffffe70a00e4 fontAfter=ffffffffe70a00e4 brushBefore=7b100bd7 brushAfter=7b100bd7 penBefore=b00017 penAfter=b00017 bitmapBefore=fffffffffe050b66 bitmapAfter=fffffffffe050b66 bkModeBefore=2 bkModeAfter=2
-[WM_CTLCOLORBTN] button=00000000003004CC hdc=FFFFFFFFB0011205
-[V24_PIXELS] nonDark=63 light=0 brightest=(,,я) at=(6,10)
-[V24_PIXELS] samples: center=(,,я) topLeft=(,,) bottomRight=(,,)
-[WM_DRAWITEM_DC] button=00000000003004CC hdc=FFFFFFFFB0011205 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=ffffffffe70a00e4 fontAfter=ffffffffe70a00e4 brushBefore=7b100bd7 brushAfter=7b100bd7 penBefore=b00017 penAfter=b00017 bitmapBefore=fffffffffe050b66 bitmapAfter=fffffffffe050b66 bkModeBefore=2 bkModeAfter=2
-[WM_CTLCOLORBTN] button=0000000000200714 hdc=FFFFFFFF9D0110C9
-[WM_DRAWITEM_DC] button=0000000000200714 hdc=FFFFFFFF9D0110C9 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=ffffffffe70a00e4 fontAfter=ffffffffe70a00e4 brushBefore=7b100bd7 brushAfter=7b100bd7 penBefore=b00017 penAfter=b00017 bitmapBefore=fffffffffe050b66 bitmapAfter=fffffffffe050b66 bkModeBefore=2 bkModeAfter=2
-[WM_CTLCOLORBTN] button=0000000000560544 hdc=FFFFFFFF9D0110C9
-[WM_DRAWITEM_STATE_TEST] button=0000000000560544 state_before=0x0 rc=(0,0)-(12,29)
-[V22_THEME] button=0000000000560544 hTheme=0000000000040002 theme_open=YES
-[V24_PIXELS] button=0x0000000000560544 rc=(0,0)-(12,29)
-[WM_DRAWITEM_DC] button=0000000000560544 hdc=FFFFFFFF9D0110C9 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=ffffffffe70a00e4 fontAfter=ffffffffe70a00e4 brushBefore=7b100bd7 brushAfter=7b100bd7 penBefore=b00017 penAfter=b00017 bitmapBefore=fffffffffe050b66 bitmapAfter=fffffffffe050b66 bkModeBefore=2 bkModeAfter=2
-[WM_CTLCOLORBTN] button=00000000002709F0 hdc=FFFFFFFFB0011205
-[WM_DRAWITEM_STATE_TEST] button=00000000002709F0 state_before=0x0 rc=(0,0)-(49,29)
-[V22_THEME] button=00000000002709F0 hTheme=0000000000040002 theme_open=YES
-[V24_PIXELS] button=0x00000000002709F0 rc=(0,0)-(49,29)
-[V24_PIXELS] nonDark=354 light=0 brightest=(я,
-,) at=(46,6)
-[V24_PIXELS] samples: center=(я, ,) topLeft=(,,) bottomRight=(,,)
-[WM_DRAWITEM_DC] button=00000000002709F0 hdc=FFFFFFFFB0011205 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=ffffffffe70a00e4 fontAfter=ffffffffe70a00e4 brushBefore=7b100bd7 brushAfter=7b100bd7 penBefore=b00017 penAfter=b00017 bitmapBefore=fffffffffe050b66 bitmapAfter=fffffffffe050b66 bkModeBefore=2 bkModeAfter=2
-[WM_CTLCOLORBTN] button=0000000000460868 hdc=FFFFFFFFB0011205
-[WM_DRAWITEM_STATE_TEST] button=0000000000460868 state_before=0x0 rc=(0,0)-(54,29)
-[V22_THEME] button=0000000000460868 hTheme=0000000000040002 theme_open=YES
-[V24_PIXELS] button=0x0000000000460868 rc=(0,0)-(54,29)
-[V24_PIXELS] nonDark=384 light=0 brightest=(,
-,я) at=(20,8)
-[V24_PIXELS] samples: center=(,,) topLeft=(,,) bottomRight=(,,)
-[WM_DRAWITEM_DC] button=0000000000460868 hdc=FFFFFFFFB0011205 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=ffffffffe70a00e4 fontAfter=ffffffffe70a00e4 brushBefore=7b100bd7 brushAfter=7b100bd7 penBefore=b00017 penAfter=b00017 bitmapBefore=fffffffffe050b66 bitmapAfter=fffffffffe050b66 bkModeBefore=2 bkModeAfter=2
-[WM_CTLCOLORBTN] button=00000000001A09F8 hdc=FFFFFFFF9D0110C9
-[WM_DRAWITEM_STATE_TEST] button=00000000001A09F8 state_before=0x0 rc=(0,0)-(163,29)
-[V22_THEME] button=00000000001A09F8 hTheme=0000000000040002 theme_open=YES
-[V24_PIXELS] button=0x00000000001A09F8 rc=(0,0)-(163,29)
-[V24_PIXELS] nonDark=1205 light=0 brightest=(,
-,я) at=(153,9)
-[V24_PIXELS] samples: center=(, ,я) topLeft=(,,) bottomRight=(,,)
-[WM_DRAWITEM_DC] button=00000000001A09F8 hdc=FFFFFFFF9D0110C9 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=ffffffffe70a00e4 fontAfter=ffffffffe70a00e4 brushBefore=7b100bd7 brushAfter=7b100bd7 penBefore=b00017 penAfter=b00017 bitmapBefore=fffffffffe050b66 bitmapAfter=fffffffffe050b66 bkModeBefore=2 bkModeAfter=2
-[V24_PIXELS] nonDark=67 light=0 brightest=(
-, , ) at=(6,6)
-[V24_PIXELS] samples: center=(,Ќ, ) topLeft=(,,) bottomRight=(,,)
-[WM_CTLCOLORBTN] button=0000000000560544 hdc=FFFFFFFFB0011205
-[WM_DRAWITEM_DC] button=0000000000560544 hdc=FFFFFFFFB0011205 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=ffffffffe70a00e4 fontAfter=ffffffffe70a00e4 brushBefore=7b100bd7 brushAfter=7b100bd7 penBefore=b00017 penAfter=b00017 bitmapBefore=fffffffffe050b66 bitmapAfter=fffffffffe050b66 bkModeBefore=2 bkModeAfter=2
-[WM_CTLCOLORBTN] button=00000000001A09F8 hdc=FFFFFFFFB0011205
-[WM_DRAWITEM_DC] button=00000000001A09F8 hdc=FFFFFFFFB0011205 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=ffffffffe70a00e4 fontAfter=ffffffffe70a00e4 brushBefore=7b100bd7 brushAfter=7b100bd7 penBefore=b00017 penAfter=b00017 bitmapBefore=fffffffffe050b66 bitmapAfter=fffffffffe050b66 bkModeBefore=2 bkModeAfter=2
-[WM_CTLCOLORBTN] button=00000000002709F0 hdc=FFFFFFFF9D0110C9
-[WM_DRAWITEM_DC] button=00000000002709F0 hdc=FFFFFFFF9D0110C9 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=ffffffffe70a00e4 fontAfter=ffffffffe70a00e4 brushBefore=7b100bd7 brushAfter=7b100bd7 penBefore=b00017 penAfter=b00017 bitmapBefore=fffffffffe050b66 bitmapAfter=fffffffffe050b66 bkModeBefore=2 bkModeAfter=2
-[WM_DRAWITEM_STATE_TEST] button=00000000003004CC state_before=0x0 rc=(0,0)-(79,29)
-[V24_PIXELS] button=0x00000000003004CC rc=(0,0)-(79,29)
-[V24_PIXELS] nonDark=624 light=0 brightest=(,
-,я) at=(1,8)
-[V24_PIXELS] samples: center=(,,ј) topLeft=(,,) bottomRight=(,,)
-[WM_DRAWITEM_STATE_TEST] button=0000000000200714 state_before=0x0 rc=(0,0)-(55,29)
-[V24_PIXELS] button=0x0000000000200714 rc=(0,0)-(55,29)
-[V24_PIXELS] nonDark=409 light=0 brightest=(я,
-,) at=(13,5)
-[V24_PIXELS] samples: center=(K,,) topLeft=(,,) bottomRight=(,,)
-[WM_DRAWITEM_STATE_TEST] button=0000000000200714 state_before=0x4 rc=(0,0)-(55,29)
-[V24_PIXELS] nonDark=461 light=0 brightest=(@,@,Ђ) at=(1,5)
-[V24_PIXELS] samples: center=(%,1,r) topLeft=(,,) bottomRight=(,,)
-[V24_PIXELS] nonDark=628 light=0 brightest=(я,
-[V24_PIXELS] samples: center=(,,
-) topLeft=(,,) bottomRight=(,,)
-[V24_PIXELS] nonDark=628 light=0 brightest=(
-, , ) at=(1,7)
-[V24_PIXELS] samples: center=(,N,
-[WM_CTLCOLORBTN] button=0000000000200714 hdc=0000000067010D52
-[WM_DRAWITEM_DC] button=0000000000200714 hdc=0000000067010D52 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=ffffffffe70a00e4 fontAfter=ffffffffe70a00e4 brushBefore=7b100bd7 brushAfter=7b100bd7 penBefore=b00017 penAfter=b00017 bitmapBefore=fffffffffe050b66 bitmapAfter=fffffffffe050b66 bkModeBefore=2 bkModeAfter=2
-[WM_CTLCOLORBTN] button=00000000003004CC hdc=0000000067010D52
-[WM_DRAWITEM_DC] button=00000000003004CC hdc=0000000067010D52 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=ffffffffe70a00e4 fontAfter=ffffffffe70a00e4 brushBefore=7b100bd7 brushAfter=7b100bd7 penBefore=b00017 penAfter=b00017 bitmapBefore=fffffffffe050b66 bitmapAfter=fffffffffe050b66 bkModeBefore=2 bkModeAfter=2
