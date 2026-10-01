@@ -1,0 +1,13 @@
+=== hook_diag started ===
+[INFO] Current PID: 50428
+[FOUND] Variable: 0x00000000004B0600
+[FOUND] Value:    0x00000000006D050E
+[SUCCESS] Classic WNDPROC subclass installed.
+[INFO] Waiting for WM_CTLCOLORSTATIC...
+[V27] button=0x00000000004B0600 size=79x29 state=0x300 theme=YES
+[V27] surface bg=0x1e1e1e nonBG=686 bright=0 min=(30,0,0) max=(255,31,31)
+[V27] button=0x00000000006D050E size=55x29 state=0x304 theme=YES
+[V27] surface bg=0x1e1e1e nonBG=461 bright=0 min=(30,30,30) max=(65,65,128)
+[V27] surface bg=0x1e1e1e nonBG=686 bright=0 min=(0,30,0) max=(31,160,31)
+[V27] button=0x00000000004B0600 size=79x29 state=0x310 theme=YES
+[V27] surface bg=0x1e1e1e nonBG=765 bright=0 min=(0,0,0) max=(31,160,31)
