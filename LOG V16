@@ -1,0 +1,29 @@
+=== hook_diag started ===
+[INFO] Current PID: 55344
+[FOUND] Variable: 0x0000000000340612
+[FOUND] Value:    0x000000000011063A
+[SUCCESS] Classic WNDPROC subclass installed.
+[INFO] Waiting for WM_CTLCOLORSTATIC...
+[WM_CTLCOLORBTN] owner-draw button
+[WM_DRAWITEM_STATE_TEST] button=0000000000340612 state_before=0x300 rc=(0,0)-(12,29)
+[WM_DRAWITEM_STATE_TEST] button=000000000011063A state_before=0x304 rc=(0,0)-(38,29)
+[WM_DRAWITEM_STATE_TEST] button=00000000004607EA state_before=0x300 rc=(0,0)-(12,29)
+[WM_DRAWITEM_STATE_TEST] button=00000000004005E6 state_before=0x300 rc=(0,0)-(49,29)
+[WM_DRAWITEM_STATE_TEST] button=00000000003D0652 state_before=0x300 rc=(0,0)-(54,29)
+[WM_DRAWITEM_STATE_TEST] button=00000000003B04D4 state_before=0x300 rc=(0,0)-(163,29)
+[WM_DRAWITEM_STATE_TEST] button=000000000011063A state_before=0x300 rc=(0,0)-(38,29)
+[WM_DRAWITEM_STATE_TEST] button=0000000000340612 state_before=0x300 rc=(0,0)-(79,29)
+[WM_DRAWITEM_STATE_TEST] button=000000000011063A state_before=0x300 rc=(0,0)-(55,29)
+[WM_DRAWITEM_STATE_TEST] button=000000000011063A state_before=0x304 rc=(0,0)-(55,29)
+[WM_CTLCOLORSTATIC] child=0x00000000009805DE class=Button text='По имени'
+[WM_CTLCOLORSTATIC] child=0x00000000002F0650 class=Button text='Константа'
+[WM_CTLCOLORSTATIC] child=0x0000000000490638 class=Button text='Массив'
+[WM_CTLCOLORSTATIC] child=0x000000000018051E class=Button text='Значение:'
+[WM_CTLCOLORSTATIC] child=0x00000000002205BE class=Button text='Константа:'
+[WM_CTLCOLORSTATIC] child=0x00000000003406F0 class=ComboBox text=''
+[WM_CTLCOLORSTATIC] child=0x00000000001505AC class=Button text='Определяет значение по умолчанию'
+[WM_CTLCOLORSTATIC] child=0x000000000023089A class=ComboBox text='1'
+[WM_CTLCOLORSTATIC] child=0x00000000003B0660 class=ComboBox text='(Целые значения константы не найдены)'
+[WM_DRAWITEM_STATE_TEST] button=00000000001E05AE state_before=0x300 rc=(0,0)-(12,29)
+[WM_CTLCOLORSTATIC] child=0x00000000006A0686 class=Edit text='lv_d091'
+[WM_CTLCOLORSTATIC] child=0x000000000032061A class=Edit text='1'
