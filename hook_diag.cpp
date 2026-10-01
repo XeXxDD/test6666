@@ -162,43 +162,64 @@ LRESULT CALLBACK DialogWndProc(
         DRAWITEMSTRUCT* dis =
             reinterpret_cast<DRAWITEMSTRUCT*>(lParam);
 
-        if (dis && dis->CtlType == ODT_BUTTON)
+        if (dis != nullptr &&
+            dis->CtlType == ODT_BUTTON &&
+            dis->hwndItem != nullptr)
         {
-            HWND hButton = dis->hwndItem;
+        HWND hButton = dis->hwndItem;
+        HWND hParent = GetParent(hButton);
 
-            char classNameA[64]{};
-            GetClassNameA(hButton, classNameA, sizeof(classNameA));
+        LONG_PTR style = GetWindowLongPtrW(hButton, GWL_STYLE);
 
-            if (GetParent(hButton) == g_hDialog &&
-                (GetWindowLongPtrW(hButton, GWL_STYLE) & BS_OWNERDRAW) != 0)
+        if (hParent == g_hDialog &&
+            (style & BS_OWNERDRAW))
             {
                 std::ostringstream ss;
 
-                char textA[256]{};
-                GetWindowTextA(hButton, textA, sizeof(textA));
-
-                ss << "[OWNERDRAW_FILTER]"
-                << " hwnd=0x" << std::hex
-                << reinterpret_cast<uintptr_t>(hButton)
+                ss << "[WM_DRAWITEM_STATE_TEST] "
+                << "button=" << hButton
+                << " state_before=0x"
+                << std::hex << dis->itemState
+                << " rc=("
                 << std::dec
-                << " text='" << textA << "'"
-                << " id=" << GetDlgCtrlID(hButton)
-                << " style=0x" << std::hex
-                << GetWindowLongPtrW(hButton, GWL_STYLE)
-                << std::dec
-                << " state=0x" << std::hex
-                << dis->itemState
-                << std::dec;
+                << dis->rcItem.left << ","
+                << dis->rcItem.top << ")-("
+                << dis->rcItem.right << ","
+                << dis->rcItem.bottom << ")";
 
                 Log(ss.str());
-            }
-        }
 
-        // НИЧЕГО НЕ ВОЗВРАЩАЕМ И НЕ РИСУЕМ.
-        // Обработка WM_DRAWITEM продолжается дальше
-        // по существующему коду.
+                LRESULT result = CallWindowProcW(
+                    g_originalWndProc,
+                    hwnd,
+                    uMsg,
+                    wParam,
+                    lParam
+                );
+
+                return result;
+            }
+        }    
     }
-    
+
+    if (uMsg == WM_CTLCOLORBTN)
+    {
+        HWND hButton = reinterpret_cast<HWND>(lParam);
+
+        if (hButton != nullptr &&
+            GetParent(hButton) == g_hDialog)
+        {
+            Log("[WM_CTLCOLORBTN] owner-draw button");
+
+            HDC hdc = reinterpret_cast<HDC>(wParam);
+
+            SetBkColor(hdc, RGB(30, 30, 30));
+            SetTextColor(hdc, RGB(255, 0, 255));
+
+            return reinterpret_cast<LRESULT>(g_hDarkBrush);
+        }
+    }
+
     if (uMsg == WM_CTLCOLORSTATIC)
     {
         HWND hStatic = reinterpret_cast<HWND>(lParam);
