@@ -1,0 +1,57 @@
+=== hook_diag started ===
+[INFO] Current PID: 24436
+[FOUND] Variable: 0x00000000004D05D4
+[FOUND] Value:    0x0000000000310B88
+[SUCCESS] Classic WNDPROC subclass installed.
+[INFO] Waiting for WM_CTLCOLORSTATIC...
+[V34] START
+[V34] module_count=112
+[V34] EXPORT FOUND module=C:\WINDOWS\SYSTEM32\UxTheme.dll address=00007FF8ED05A110
+[V34] DONE
+[V29] POSTPROCESS TEST button=0x00000000004D05D4 size=79x29 pixel=(2,2) before=0x1e1e1e
+[V30] COPY BACK: YES after=0xffff
+[V32] GETDIBITS button=0x00000000004D05D4 result=29 expected=29 pixel(2,2)=0xffff
+[V28] Saved surface: button_0x00000000004D05D4_state_0.bmp
+[V27] button=0x00000000004D05D4 size=79x29 state=0x0 theme=YES
+[V27] surface bg=0x1e1e1e nonBG=695 bright=0 min=(0,30,0) max=(255,255,31)
+[V31] AFTER ANALYZE button=0x00000000004D05D4 size=79x29 pixel=(2,2) color=0xffff
+[V32] GETDIBITS button=0x0000000000310B88 result=29 expected=29 pixel(2,2)=0x1e1e1e
+[V28] Saved surface: button_0x0000000000310B88_state_4.bmp
+[V27] button=0x0000000000310B88 size=55x29 state=0x4 theme=YES
+[V27] surface bg=0x1e1e1e nonBG=461 bright=0 min=(30,30,30) max=(65,65,128)
+[V32] GETDIBITS button=0x00000000004D05D4 result=29 expected=29 pixel(2,2)=0x1e1e1e
+[V27] button=0x00000000004D05D4 size=12x29 state=0x0 theme=YES
+[V27] surface bg=0x1e1e1e nonBG=78 bright=0 min=(30,0,0) max=(255,31,31)
+[V27] button=0x0000000000310B88 size=38x29 state=0x4 theme=YES
+[V27] surface bg=0x1e1e1e nonBG=309 bright=0 min=(30,30,30) max=(65,65,128)
+[V32] GETDIBITS button=0x00000000014606CC result=29 expected=29 pixel(2,2)=0x1e1e1e
+[V28] Saved surface: button_0x00000000014606CC_state_768.bmp
+[V27] button=0x00000000014606CC size=12x29 state=0x300 theme=YES
+[V27] surface bg=0x1e1e1e nonBG=78 bright=0 min=(0,0,0) max=(31,31,31)
+[V32] GETDIBITS button=0x00000000005F0714 result=29 expected=29 pixel(2,2)=0x1e1e1e
+[V28] Saved surface: button_0x00000000005F0714_state_768.bmp
+[V27] button=0x00000000005F0714 size=49x29 state=0x300 theme=YES
+[V27] surface bg=0x1e1e1e nonBG=405 bright=0 min=(0,0,0) max=(31,31,31)
+[V32] GETDIBITS button=0x00000000003D071E result=29 expected=29 pixel(2,2)=0x1e1e1e
+[V28] Saved surface: button_0x00000000003D071E_state_768.bmp
+[V27] button=0x00000000003D071E size=54x29 state=0x300 theme=YES
+[V27] surface bg=0x1e1e1e nonBG=438 bright=0 min=(0,0,0) max=(31,31,31)
+[V32] GETDIBITS button=0x00000000001C0A20 result=29 expected=29 pixel(2,2)=0x1e1e1e
+[V28] Saved surface: button_0x00000000001C0A20_state_768.bmp
+[V27] button=0x00000000001C0A20 size=163x29 state=0x300 theme=YES
+[V27] surface bg=0x1e1e1e nonBG=1333 bright=0 min=(0,0,0) max=(31,31,31)
+[V28] Saved surface: button_0x0000000000310B88_state_768.bmp
+[V27] button=0x0000000000310B88 size=38x29 state=0x300 theme=YES
+[V27] surface bg=0x1e1e1e nonBG=309 bright=0 min=(30,0,0) max=(255,31,31)
+[V28] Saved surface: button_0x00000000004D05D4_state_768.bmp
+[V27] button=0x00000000004D05D4 size=12x29 state=0x300 theme=YES
+[V27] surface bg=0x1e1e1e nonBG=78 bright=0 min=(0,0,30) max=(31,31,255)
+[V27] surface bg=0x1e1e1e nonBG=78 bright=0 min=(0,30,0) max=(31,160,31)
+[V27] surface bg=0x1e1e1e nonBG=405 bright=0 min=(30,0,0) max=(255,31,31)
+[V27] surface bg=0x1e1e1e nonBG=438 bright=0 min=(0,0,30) max=(31,31,255)
+[V27] surface bg=0x1e1e1e nonBG=1333 bright=0 min=(0,0,30) max=(31,31,255)
+[V27] button=0x0000000000310B88 size=38x29 state=0x0 theme=YES
+[V27] button=0x00000000014606CC size=12x29 state=0x0 theme=YES
+[V27] button=0x00000000005F0714 size=49x29 state=0x0 theme=YES
+[V27] button=0x00000000003D071E size=54x29 state=0x0 theme=YES
+[V27] button=0x00000000001C0A20 size=163x29 state=0x0 theme=YES
