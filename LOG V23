@@ -1,0 +1,54 @@
+=== hook_diag started ===
+[INFO] Current PID: 75576
+[FOUND] Variable: 0x00000000001006B0
+[FOUND] Value:    0x00000000003807F0
+[SUCCESS] Classic WNDPROC subclass installed.
+[INFO] Waiting for WM_CTLCOLORSTATIC...
+[WM_CTLCOLORBTN] owner-draw button
+[WM_CTLCOLORBTN] button=00000000001006B0 hdc=00000000690111AB
+[WM_DRAWITEM_STATE_TEST] button=00000000001006B0 state_before=0x0 rc=(0,0)-(12,29)
+[V22_THEME] button=00000000001006B0 hTheme=0000000000040002 theme_open=YES
+[WM_DRAWITEM_DC] button=00000000001006B0 hdc=00000000690111AB textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=5b0a123c fontAfter=5b0a123c brushBefore=b4100d6a brushAfter=b4100d6a penBefore=b00017 penAfter=b00017 bitmapBefore=ffffffffdd05117d bitmapAfter=ffffffffdd05117d bkModeBefore=2 bkModeAfter=2
+[WM_CTLCOLORBTN] button=00000000003807F0 hdc=00000000690111AB
+[WM_DRAWITEM_STATE_TEST] button=00000000003807F0 state_before=0x4 rc=(0,0)-(38,29)
+[V22_THEME] button=00000000003807F0 hTheme=0000000000040002 theme_open=YES
+[WM_DRAWITEM_DC] button=00000000003807F0 hdc=00000000690111AB textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=5b0a123c fontAfter=5b0a123c brushBefore=b4100d6a brushAfter=b4100d6a penBefore=b00017 penAfter=b00017 bitmapBefore=ffffffffdd05117d bitmapAfter=ffffffffdd05117d bkModeBefore=2 bkModeAfter=2
+[WM_CTLCOLORBTN] button=0000000000E10872 hdc=00000000690111AB
+[WM_DRAWITEM_STATE_TEST] button=0000000000E10872 state_before=0x300 rc=(0,0)-(12,29)
+[V22_THEME] button=0000000000E10872 hTheme=0000000000040002 theme_open=YES
+[WM_DRAWITEM_DC] button=0000000000E10872 hdc=00000000690111AB textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=5b0a123c fontAfter=5b0a123c brushBefore=b4100d6a brushAfter=b4100d6a penBefore=b00017 penAfter=b00017 bitmapBefore=ffffffffdd05117d bitmapAfter=ffffffffdd05117d bkModeBefore=2 bkModeAfter=2
+[WM_CTLCOLORBTN] button=00000000007B07F8 hdc=00000000690111AB
+[WM_DRAWITEM_STATE_TEST] button=00000000007B07F8 state_before=0x300 rc=(0,0)-(49,29)
+[V22_THEME] button=00000000007B07F8 hTheme=0000000000040002 theme_open=YES
+[WM_DRAWITEM_DC] button=00000000007B07F8 hdc=00000000690111AB textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=5b0a123c fontAfter=5b0a123c brushBefore=b4100d6a brushAfter=b4100d6a penBefore=b00017 penAfter=b00017 bitmapBefore=ffffffffdd05117d bitmapAfter=ffffffffdd05117d bkModeBefore=2 bkModeAfter=2
+[WM_CTLCOLORBTN] button=0000000000CF05FA hdc=00000000690111AB
+[WM_DRAWITEM_STATE_TEST] button=0000000000CF05FA state_before=0x300 rc=(0,0)-(54,29)
+[V22_THEME] button=0000000000CF05FA hTheme=0000000000040002 theme_open=YES
+[WM_DRAWITEM_DC] button=0000000000CF05FA hdc=00000000690111AB textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=5b0a123c fontAfter=5b0a123c brushBefore=b4100d6a brushAfter=b4100d6a penBefore=b00017 penAfter=b00017 bitmapBefore=ffffffffdd05117d bitmapAfter=ffffffffdd05117d bkModeBefore=2 bkModeAfter=2
+[WM_CTLCOLORBTN] button=00000000005D067E hdc=00000000690111AB
+[WM_DRAWITEM_STATE_TEST] button=00000000005D067E state_before=0x300 rc=(0,0)-(163,29)
+[V22_THEME] button=00000000005D067E hTheme=0000000000040002 theme_open=YES
+[WM_DRAWITEM_DC] button=00000000005D067E hdc=00000000690111AB textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=5b0a123c fontAfter=5b0a123c brushBefore=b4100d6a brushAfter=b4100d6a penBefore=b00017 penAfter=b00017 bitmapBefore=ffffffffdd05117d bitmapAfter=ffffffffdd05117d bkModeBefore=2 bkModeAfter=2
+[WM_DRAWITEM_STATE_TEST] button=00000000003807F0 state_before=0x300 rc=(0,0)-(38,29)
+[WM_DRAWITEM_STATE_TEST] button=00000000001006B0 state_before=0x300 rc=(0,0)-(12,29)
+[WM_CTLCOLORBTN] button=00000000001006B0 hdc=FFFFFFFFA5010EC0
+[WM_DRAWITEM_DC] button=00000000001006B0 hdc=FFFFFFFFA5010EC0 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=5b0a123c fontAfter=5b0a123c brushBefore=b4100d6a brushAfter=b4100d6a penBefore=b00017 penAfter=b00017 bitmapBefore=ffffffffdd05117d bitmapAfter=ffffffffdd05117d bkModeBefore=2 bkModeAfter=2
+[WM_CTLCOLORBTN] button=00000000003807F0 hdc=FFFFFFFFA5010EC0
+[WM_DRAWITEM_DC] button=00000000003807F0 hdc=FFFFFFFFA5010EC0 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=5b0a123c fontAfter=5b0a123c brushBefore=b4100d6a brushAfter=b4100d6a penBefore=b00017 penAfter=b00017 bitmapBefore=ffffffffdd05117d bitmapAfter=ffffffffdd05117d bkModeBefore=2 bkModeAfter=2
+[WM_CTLCOLORBTN] button=0000000000E10872 hdc=FFFFFFFFA5010EC0
+[WM_DRAWITEM_DC] button=0000000000E10872 hdc=FFFFFFFFA5010EC0 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=5b0a123c fontAfter=5b0a123c brushBefore=b4100d6a brushAfter=b4100d6a penBefore=b00017 penAfter=b00017 bitmapBefore=ffffffffdd05117d bitmapAfter=ffffffffdd05117d bkModeBefore=2 bkModeAfter=2
+[WM_CTLCOLORBTN] button=00000000007B07F8 hdc=FFFFFFFFA5010EC0
+[WM_DRAWITEM_DC] button=00000000007B07F8 hdc=FFFFFFFFA5010EC0 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=5b0a123c fontAfter=5b0a123c brushBefore=b4100d6a brushAfter=b4100d6a penBefore=b00017 penAfter=b00017 bitmapBefore=ffffffffdd05117d bitmapAfter=ffffffffdd05117d bkModeBefore=2 bkModeAfter=2
+[WM_CTLCOLORBTN] button=0000000000CF05FA hdc=FFFFFFFFA5010EC0
+[WM_DRAWITEM_DC] button=0000000000CF05FA hdc=FFFFFFFFA5010EC0 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=5b0a123c fontAfter=5b0a123c brushBefore=b4100d6a brushAfter=b4100d6a penBefore=b00017 penAfter=b00017 bitmapBefore=ffffffffdd05117d bitmapAfter=ffffffffdd05117d bkModeBefore=2 bkModeAfter=2
+[WM_CTLCOLORBTN] button=00000000005D067E hdc=FFFFFFFFA5010EC0
+[WM_DRAWITEM_DC] button=00000000005D067E hdc=FFFFFFFFA5010EC0 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=5b0a123c fontAfter=5b0a123c brushBefore=b4100d6a brushAfter=b4100d6a penBefore=b00017 penAfter=b00017 bitmapBefore=ffffffffdd05117d bitmapAfter=ffffffffdd05117d bkModeBefore=2 bkModeAfter=2
+[WM_DRAWITEM_STATE_TEST] button=00000000001006B0 state_before=0x300 rc=(0,0)-(79,29)
+[WM_DRAWITEM_STATE_TEST] button=00000000003807F0 state_before=0x300 rc=(0,0)-(55,29)
+[WM_DRAWITEM_STATE_TEST] button=00000000003807F0 state_before=0x304 rc=(0,0)-(55,29)
+[WM_CTLCOLORBTN] button=00000000001006B0 hdc=FFFFFFFFB7010BC6
+[WM_DRAWITEM_DC] button=00000000001006B0 hdc=FFFFFFFFB7010BC6 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=5b0a123c fontAfter=5b0a123c brushBefore=b4100d6a brushAfter=b4100d6a penBefore=b00017 penAfter=b00017 bitmapBefore=ffffffffdd05117d bitmapAfter=ffffffffdd05117d bkModeBefore=2 bkModeAfter=2
+[WM_CTLCOLORBTN] button=00000000003807F0 hdc=FFFFFFFFB7010BC6
+[WM_DRAWITEM_DC] button=00000000003807F0 hdc=FFFFFFFFB7010BC6 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=5b0a123c fontAfter=5b0a123c brushBefore=b4100d6a brushAfter=b4100d6a penBefore=b00017 penAfter=b00017 bitmapBefore=ffffffffdd05117d bitmapAfter=ffffffffdd05117d bkModeBefore=2 bkModeAfter=2
+[WM_DRAWITEM_STATE_TEST] button=00000000001006B0 state_before=0x310 rc=(0,0)-(79,29)
+[WM_DRAWITEM_DC] button=00000000001006B0 hdc=FFFFFFFFB7010BC6 textBefore=0xdcdcdc textAfter=0xdcdcdc bkBefore=0x1e1e1e bkAfter=0x1e1e1e textBefore=dcdcdc textAfter=dcdcdc bkBefore=1e1e1e bkAfter=1e1e1e fontBefore=5b0a123c fontAfter=5b0a123c brushBefore=900010 brushAfter=900010 penBefore=b00017 penAfter=b00017 bitmapBefore=ffffffffdd05117d bitmapAfter=ffffffffdd05117d bkModeBefore=2 bkModeAfter=2
