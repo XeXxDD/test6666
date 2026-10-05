@@ -1,0 +1,191 @@
+=== hook_diag started ===
+[INFO] Current PID: 27216
+[FOUND] Variable: 0x00000000005F0612
+[FOUND] Value:    0x00000000008A0716
+[SUCCESS] Classic WNDPROC subclass installed.
+[INFO] Waiting for WM_CTLCOLORSTATIC...
+[V62] ExtTextOutW hook installed.
+[V66] SetTextColor hDC=FFFFFFFFB5011983 color=0x0
+[V62] ExtTextOutW hDC=FFFFFFFFB5011983 count=1 color=0x0
+[V62] ExtTextOutW hDC=FFFFFFFFB5011983 count=4 color=0x0
+[V62] ExtTextOutW hDC=FFFFFFFFB5011983 count=6 color=0x0
+[V62] ExtTextOutW hDC=FFFFFFFFB5011983 count=3 color=0x0
+[V62] ExtTextOutW hDC=FFFFFFFFB5011983 count=5 color=0x0
+[V62] ExtTextOutW hDC=FFFFFFFFB5011983 count=7 color=0x0
+[V66] SetTextColor hDC=00000000440112F1 color=0x6d6d6d
+[V62] ExtTextOutW hDC=00000000440112F1 count=1 color=0x6d6d6d
+[V62] ExtTextOutW hDC=00000000440112F1 count=4 color=0x6d6d6d
+[V66] SetTextColor hDC=00000000440112F1 color=0x0
+[V62] ExtTextOutW hDC=00000000440112F1 count=6 color=0x6d6d6d
+[V62] ExtTextOutW hDC=00000000440112F1 count=3 color=0x6d6d6d
+[V62] ExtTextOutW hDC=00000000440112F1 count=5 color=0x6d6d6d
+[V62] ExtTextOutW hDC=00000000440112F1 count=7 color=0x6d6d6d
+[V66] SetTextColor hDC=000000006C0114A8 color=0x0
+[V62] ExtTextOutW hDC=000000006C0114A8 count=49 color=0x0
+[V62] ExtTextOutW hDC=000000006C0114A8 count=31 color=0x0
+[V66] SetTextColor hDC=0000000031011166 color=0x0
+[V62] ExtTextOutW hDC=0000000031011166 count=49 color=0x0
+[V62] ExtTextOutW hDC=0000000031011166 count=31 color=0x0
+[V62] ExtTextOutW hDC=000000006C0114A8 count=1 color=0x0
+[V62] ExtTextOutW hDC=000000006C0114A8 count=4 color=0x0
+[V62] ExtTextOutW hDC=000000006C0114A8 count=6 color=0x0
+[V62] ExtTextOutW hDC=000000006C0114A8 count=3 color=0x0
+[V62] ExtTextOutW hDC=000000006C0114A8 count=5 color=0x0
+[V62] ExtTextOutW hDC=000000006C0114A8 count=7 color=0x0
+[V62] ExtTextOutW hDC=00000000440112F1 count=49 color=0x0
+[V66] SetTextColor hDC=00000000440112F1 color=0xffffff
+[V62] ExtTextOutW hDC=00000000440112F1 count=31 color=0xffffff
+[V66] SetTextColor hDC=0000000031011166 color=0xdcdcdc
+[V66] SetTextColor hDC=00000000440112F1 color=0xdcdcdc
+[V62] ExtTextOutW hDC=0000000031011166 count=1 color=0xdcdcdc
+[V62] ExtTextOutW hDC=0000000031011166 count=4 color=0xdcdcdc
+[V62] ExtTextOutW hDC=0000000031011166 count=3 color=0xdcdcdc
+[V60] DRAW seq=1 hwnd=00000000005F0612 hDC=0000000031011166 state=0x0 text="Variable" NEW_HDC
+[V44] DRAWITEM hwnd=0x00000000005F0612 itemID=471 itemAction=0x1 itemState=0x0 itemData=0000000000000000 rc=(0,0,79,29) hDC=0000000031011166 text="Variable"
+[V54] BUTTON META hwnd=0x00000000005F0612 text="Variable" CtlID=471 itemState=0x0 style=0x5001400b exStyle=0x0 GWLP_ID=0x1d7 USERDATA=0x0 FONT=0xFFFFFFFFD20A0D14
+[V55] PROP hwnd=0x00000000005F0612 name="SysSetRedraw" data=0x1 dataDec=1
+[V59] ENTRY surface seq=1
+[V27] button=0x00000000005F0612 size=79x29 state=0x0 theme=YES normalHr=0x0 normal=0x0 hotHr=0x0 hot=0x0 pressedHr=0x0 pressed=0x0 disabledHr=0x0 disabled=0x838383
+[V27] surface bg=0x1e1e1e nonBG=2291 bright=1681 min=(0,160,0) max=(240,240,240)
+[V58] BEFORE_NATIVE surface
+[V61] GDI BEFORE_NATIVE seq=1 hDC=0000000031011166 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,867) font=FFFFFFFFD20A0D14
+[V66] SetTextColor hDC=0000000031011166 color=0xa000
+[V66] HEX caller=00007FF6376BEDC8 before[-16..-1]=49 8B CF 48 89 85 C0 03 00 00 FF 15 18 C6 59 01 after[0..31]=8B 4F 0C 89 4C 24 30 8B 4F 14 89 4C 24 38 8B 4F 08 89 4C 24 34 8B 4F 10 89 4C 24 3C 49 8B CF 89
+[V62] ExtTextOutW hDC=0000000031011166 count=1 color=0xa000
+[V62] ExtTextOutW hDC=0000000031011166 count=8 color=0xa000
+[V61] GDI AFTER_NATIVE seq=1 hDC=0000000031011166 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,867) font=FFFFFFFFD20A0D14
+[V58] AFTER_NATIVE surface
+[V27] surface bg=0x1e1e1e nonBG=686 bright=0 min=(0,30,0) max=(31,160,31)
+[V60] DRAW seq=2 hwnd=00000000008A0716 hDC=0000000031011166 state=0x4 text="Value" SAME_HDC_AS_PREV
+[V44] DRAWITEM hwnd=0x00000000008A0716 itemID=473 itemAction=0x1 itemState=0x4 itemData=0000000000000000 rc=(0,0,55,29) hDC=0000000031011166 text="Value"
+[V54] BUTTON META hwnd=0x00000000008A0716 text="Value" CtlID=473 itemState=0x4 style=0x5801400b exStyle=0x0 GWLP_ID=0x1d9 USERDATA=0x0 FONT=0xFFFFFFFFD20A0D14
+[V55] PROP hwnd=0x00000000008A0716 name="SysSetRedraw" data=0x1 dataDec=1
+[V59] ENTRY surface seq=2
+[V27] button=0x00000000008A0716 size=55x29 state=0x4 theme=YES normalHr=0x0 normal=0x0 hotHr=0x0 hot=0x0 pressedHr=0x0 pressed=0x0 disabledHr=0x0 disabled=0x838383
+[V27] surface bg=0x1e1e1e nonBG=1595 bright=1225 min=(64,64,128) max=(240,240,240)
+[V66] SetTextColor hDC=0000000031011166 color=0x804040
+[V62] ExtTextOutW hDC=0000000031011166 count=1 color=0x804040
+[V62] ExtTextOutW hDC=0000000031011166 count=5 color=0x804040
+[V27] surface bg=0x1e1e1e nonBG=461 bright=0 min=(30,30,30) max=(65,65,128)
+[V62] ExtTextOutW hDC=00000000440112F1 count=12 color=0x0
+[V62] ExtTextOutW hDC=00000000440112F1 count=24 color=0x0
+[V66] SetTextColor hDC=00000000440112F1 color=0xc0
+[V62] ExtTextOutW hDC=00000000440112F1 count=21 color=0xc0
+[V66] SetTextColor hDC=FFFFFFFFB5011983 color=0xdcdcdc
+[V62] ExtTextOutW hDC=FFFFFFFFB5011983 count=1 color=0xdcdcdc
+[V62] ExtTextOutW hDC=FFFFFFFFB5011983 count=4 color=0xdcdcdc
+[V62] ExtTextOutW hDC=FFFFFFFFB5011983 count=3 color=0xdcdcdc
+[V60] DRAW seq=3 hwnd=00000000005F0612 hDC=FFFFFFFFB5011983 state=0x0 text="Variable" NEW_HDC
+[V44] DRAWITEM hwnd=0x00000000005F0612 itemID=471 itemAction=0x1 itemState=0x0 itemData=0000000000000000 rc=(0,0,79,29) hDC=FFFFFFFFB5011983 text="Variable"
+[V55] PROP hwnd=0x00000000005F0612 name=ATOM:43282 atomName="#43282" data=0x40002 dataDec=262146
+[V59] ENTRY surface seq=3
+[V27] surface bg=0x1e1e1e nonBG=0 bright=0 min=(30,30,30) max=(30,30,30)
+[V61] GDI BEFORE_NATIVE seq=3 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,867) font=FFFFFFFFD20A0D14
+[V66] SetTextColor hDC=FFFFFFFFB5011983 color=0xa000
+[V62] ExtTextOutW hDC=FFFFFFFFB5011983 count=1 color=0xa000
+[V62] ExtTextOutW hDC=FFFFFFFFB5011983 count=8 color=0xa000
+[V61] GDI AFTER_NATIVE seq=3 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,867) font=FFFFFFFFD20A0D14
+[V60] DRAW seq=4 hwnd=00000000008A0716 hDC=FFFFFFFFB5011983 state=0x4 text="Value" SAME_HDC_AS_PREV
+[V44] DRAWITEM hwnd=0x00000000008A0716 itemID=473 itemAction=0x1 itemState=0x4 itemData=0000000000000000 rc=(0,0,55,29) hDC=FFFFFFFFB5011983 text="Value"
+[V55] PROP hwnd=0x00000000008A0716 name=ATOM:43282 atomName="#43282" data=0x40002 dataDec=262146
+[V59] ENTRY surface seq=4
+[V66] SetTextColor hDC=FFFFFFFFB5011983 color=0x804040
+[V62] ExtTextOutW hDC=FFFFFFFFB5011983 count=1 color=0x804040
+[V62] ExtTextOutW hDC=FFFFFFFFB5011983 count=5 color=0x804040
+[V66] SetTextColor hDC=FFFFFFFFB5011983 color=0x606060
+[V62] ExtTextOutW hDC=FFFFFFFFB5011983 count=39 color=0x606060
+[V62] ExtTextOutW hDC=0000000031011166 count=12 color=0x0
+[V62] ExtTextOutW hDC=0000000031011166 count=24 color=0x0
+[V66] SetTextColor hDC=0000000031011166 color=0xc0
+[V62] ExtTextOutW hDC=0000000031011166 count=21 color=0xc0
+[V66] SetTextColor hDC=000000006C0114A8 color=0x606060
+[V62] ExtTextOutW hDC=000000006C0114A8 count=39 color=0x606060
+[V60] DRAW seq=5 hwnd=00000000005F0612 hDC=FFFFFFFFB5011983 state=0x0 text="Variable" SAME_HDC_AS_PREV
+[V59] ENTRY surface seq=5
+[V61] GDI BEFORE_NATIVE seq=5 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,867) font=FFFFFFFFD20A0D14
+[V61] GDI AFTER_NATIVE seq=5 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,867) font=FFFFFFFFD20A0D14
+[V60] DRAW seq=6 hwnd=00000000008A0716 hDC=FFFFFFFFB5011983 state=0x4 text="Value" SAME_HDC_AS_PREV
+[V59] ENTRY surface seq=6
+[V60] DRAW seq=7 hwnd=00000000005F0612 hDC=FFFFFFFFB5011983 state=0x0 text="Variable" SAME_HDC_AS_PREV
+[V59] ENTRY surface seq=7
+[V61] GDI BEFORE_NATIVE seq=7 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,867) font=FFFFFFFFD20A0D14
+[V61] GDI AFTER_NATIVE seq=7 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,867) font=FFFFFFFFD20A0D14
+[V60] DRAW seq=8 hwnd=00000000008A0716 hDC=FFFFFFFFB5011983 state=0x4 text="Value" SAME_HDC_AS_PREV
+[V59] ENTRY surface seq=8
+[V60] DRAW seq=9 hwnd=00000000005F0612 hDC=FFFFFFFFB5011983 state=0x0 text="Variable" SAME_HDC_AS_PREV
+[V59] ENTRY surface seq=9
+[V61] GDI BEFORE_NATIVE seq=9 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,867) font=FFFFFFFFD20A0D14
+[V61] GDI AFTER_NATIVE seq=9 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,867) font=FFFFFFFFD20A0D14
+[V60] DRAW seq=10 hwnd=00000000008A0716 hDC=FFFFFFFFB5011983 state=0x4 text="Value" SAME_HDC_AS_PREV
+[V59] ENTRY surface seq=10
+[V66] SetTextColor hDC=000000006C0114A8 color=0xdcdcdc
+[V66] SetTextColor hDC=0000000031011166 color=0x606060
+[V62] ExtTextOutW hDC=0000000031011166 count=39 color=0x606060
+[V60] DRAW seq=11 hwnd=00000000005F0612 hDC=FFFFFFFFB5011983 state=0x0 text="Variable" SAME_HDC_AS_PREV
+[V59] ENTRY surface seq=11
+[V61] GDI BEFORE_NATIVE seq=11 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,867) font=FFFFFFFFD20A0D14
+[V61] GDI AFTER_NATIVE seq=11 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,867) font=FFFFFFFFD20A0D14
+[V60] DRAW seq=12 hwnd=00000000008A0716 hDC=FFFFFFFFB5011983 state=0x4 text="Value" SAME_HDC_AS_PREV
+[V59] ENTRY surface seq=12
+[V62] ExtTextOutW hDC=000000006C0114A8 count=1 color=0xdcdcdc
+[V62] ExtTextOutW hDC=000000006C0114A8 count=4 color=0xdcdcdc
+[V62] ExtTextOutW hDC=000000006C0114A8 count=3 color=0xdcdcdc
+[V60] DRAW seq=13 hwnd=00000000005F0612 hDC=000000006C0114A8 state=0x0 text="Variable" NEW_HDC
+[V44] DRAWITEM hwnd=0x00000000005F0612 itemID=471 itemAction=0x1 itemState=0x0 itemData=0000000000000000 rc=(0,0,79,29) hDC=000000006C0114A8 text="Variable"
+[V59] ENTRY surface seq=13
+[V27] surface bg=0x1e1e1e nonBG=765 bright=79 min=(0,30,0) max=(240,240,240)
+[V61] GDI BEFORE_NATIVE seq=13 hDC=000000006C0114A8 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,868) font=FFFFFFFFD20A0D14
+[V66] SetTextColor hDC=000000006C0114A8 color=0xa000
+[V62] ExtTextOutW hDC=000000006C0114A8 count=1 color=0xa000
+[V62] ExtTextOutW hDC=000000006C0114A8 count=8 color=0xa000
+[V61] GDI AFTER_NATIVE seq=13 hDC=000000006C0114A8 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,868) font=FFFFFFFFD20A0D14
+[V60] DRAW seq=14 hwnd=00000000008A0716 hDC=000000006C0114A8 state=0x4 text="Value" SAME_HDC_AS_PREV
+[V44] DRAWITEM hwnd=0x00000000008A0716 itemID=473 itemAction=0x1 itemState=0x4 itemData=0000000000000000 rc=(0,0,55,29) hDC=000000006C0114A8 text="Value"
+[V59] ENTRY surface seq=14
+[V27] surface bg=0x1e1e1e nonBG=516 bright=55 min=(30,30,30) max=(240,240,240)
+[V66] SetTextColor hDC=000000006C0114A8 color=0x804040
+[V62] ExtTextOutW hDC=000000006C0114A8 count=1 color=0x804040
+[V62] ExtTextOutW hDC=000000006C0114A8 count=5 color=0x804040
+[V60] DRAW seq=15 hwnd=00000000005F0612 hDC=FFFFFFFFB5011983 state=0x0 text="Variable" NEW_HDC
+[V59] ENTRY surface seq=15
+[V61] GDI BEFORE_NATIVE seq=15 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,868) font=FFFFFFFFD20A0D14
+[V61] GDI AFTER_NATIVE seq=15 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,868) font=FFFFFFFFD20A0D14
+[V60] DRAW seq=16 hwnd=00000000008A0716 hDC=FFFFFFFFB5011983 state=0x4 text="Value" SAME_HDC_AS_PREV
+[V59] ENTRY surface seq=16
+[V66] SetTextColor hDC=00000000440112F1 color=0x606060
+[V62] ExtTextOutW hDC=00000000440112F1 count=39 color=0x606060
+[V60] DRAW seq=17 hwnd=00000000005F0612 hDC=FFFFFFFFB5011983 state=0x0 text="Variable" SAME_HDC_AS_PREV
+[V59] ENTRY surface seq=17
+[V61] GDI BEFORE_NATIVE seq=17 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,868) font=FFFFFFFFD20A0D14
+[V61] GDI AFTER_NATIVE seq=17 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,868) font=FFFFFFFFD20A0D14
+[V60] DRAW seq=18 hwnd=00000000008A0716 hDC=FFFFFFFFB5011983 state=0x4 text="Value" SAME_HDC_AS_PREV
+[V59] ENTRY surface seq=18
+[V60] DRAW seq=19 hwnd=00000000005F0612 hDC=FFFFFFFFB5011983 state=0x0 text="Variable" SAME_HDC_AS_PREV
+[V59] ENTRY surface seq=19
+[V61] GDI BEFORE_NATIVE seq=19 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,868) font=FFFFFFFFD20A0D14
+[V61] GDI AFTER_NATIVE seq=19 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,868) font=FFFFFFFFD20A0D14
+[V60] DRAW seq=20 hwnd=00000000008A0716 hDC=FFFFFFFFB5011983 state=0x4 text="Value" SAME_HDC_AS_PREV
+[V59] ENTRY surface seq=20
+[V60] DRAW seq=21 hwnd=00000000005F0612 hDC=FFFFFFFFB5011983 state=0x0 text="Variable" SAME_HDC_AS_PREV
+[V59] ENTRY surface seq=21
+[V61] GDI BEFORE_NATIVE seq=21 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,868) font=FFFFFFFFD20A0D14
+[V61] GDI AFTER_NATIVE seq=21 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,868) font=FFFFFFFFD20A0D14
+[V60] DRAW seq=22 hwnd=00000000008A0716 hDC=FFFFFFFFB5011983 state=0x4 text="Value" SAME_HDC_AS_PREV
+[V59] ENTRY surface seq=22
+[V62] ExtTextOutW hDC=000000006C0114A8 count=12 color=0x0
+[V62] ExtTextOutW hDC=000000006C0114A8 count=24 color=0x0
+[V66] SetTextColor hDC=000000006C0114A8 color=0xc0
+[V62] ExtTextOutW hDC=000000006C0114A8 count=21 color=0xc0
+[V60] DRAW seq=23 hwnd=00000000005F0612 hDC=FFFFFFFFB5011983 state=0x0 text="Variable" SAME_HDC_AS_PREV
+[V59] ENTRY surface seq=23
+[V61] GDI BEFORE_NATIVE seq=23 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,868) font=FFFFFFFFD20A0D14
+[V61] GDI AFTER_NATIVE seq=23 hDC=FFFFFFFFB5011983 text=0xdcdcdc bk=0x1e1e1e bkMode=2 rop2=13 map=1 org=(459,868) font=FFFFFFFFD20A0D14
+[V60] DRAW seq=24 hwnd=00000000008A0716 hDC=FFFFFFFFB5011983 state=0x4 text="Value" SAME_HDC_AS_PREV
+[V59] ENTRY surface seq=24
+[V66] SetTextColor hDC=0000000031011166 color=0x6d6d6d
+[V62] ExtTextOutW hDC=0000000031011166 count=1 color=0x6d6d6d
+[V62] ExtTextOutW hDC=0000000031011166 count=4 color=0x6d6d6d
+[V62] ExtTextOutW hDC=0000000031011166 count=6 color=0x6d6d6d
+[V62] ExtTextOutW hDC=0000000031011166 count=3 color=0x6d6d6d
+[V62] ExtTextOutW hDC=0000000031011166 count=5 color=0x6d6d6d
+[V62] ExtTextOutW hDC=0000000031011166 count=7 color=0x6d6d6d
