@@ -1,0 +1,162 @@
+V75 диагностический блок
+
+Предложенный блок должен находиться внутри `HookSetTextColor`.
+
+Идея была:
+
+cpp
+// ========================= V75 RDI TEST =========================
+HMODULE hModuleV75 = nullptr;
+
+if (GetModuleHandleExW(
+        GET_MODULE_HANDLE_EX_FLAG_FROM_ADDRESS |
+        GET_MODULE_HANDLE_EX_FLAG_UNCHANGED_REFCOUNT,
+        reinterpret_cast<LPCWSTR>(caller),
+        &hModuleV75))
+{
+    MODULEINFO moduleInfoV75{};
+
+    if (GetModuleInformation(
+            GetCurrentProcess(),
+            hModuleV75,
+            &moduleInfoV75,
+            sizeof(moduleInfoV75)))
+    {
+        ULONG_PTR baseV75 =
+            reinterpret_cast<ULONG_PTR>(
+                moduleInfoV75.lpBaseOfDll
+            );
+
+        ULONG_PTR callerAddrV75 =
+            reinterpret_cast<ULONG_PTR>(caller);
+
+        ULONG_PTR offsetV75 =
+            callerAddrV75 - baseV75;
+
+        if (offsetV75 == 0x1F4EDC8 &&
+            (color == 0xA000 ||
+             color == 0x804040))
+        {
+            ULONG_PTR rdiValue = arg4;
+
+            ULONG_PTR field08 = 0;
+            ULONG_PTR field0C = 0;
+            ULONG_PTR field10 = 0;
+            ULONG_PTR field14 = 0;
+
+            if (rdiValue != 0)
+            {
+                field08 = *reinterpret_cast<ULONG_PTR*>(
+                    rdiValue + 0x08
+                );
+
+                field0C = *reinterpret_cast<ULONG_PTR*>(
+                    rdiValue + 0x0C
+                );
+
+                field10 = *reinterpret_cast<ULONG_PTR*>(
+                    rdiValue + 0x10
+                );
+
+                field14 = *reinterpret_cast<ULONG_PTR*>(
+                    rdiValue + 0x14
+                );
+            }
+
+            std::ostringstream ssV75;
+
+            ssV75 << "[V75] OBJECT"
+                  << " color=0x"
+                  << std::hex
+                  << static_cast<unsigned int>(color)
+                  << " RDI=0x"
+                  << rdiValue
+                  << " +08=0x"
+                  << field08
+                  << " +0C=0x"
+                  << field0C
+                  << " +10=0x"
+                  << field10
+                  << " +14=0x"
+                  << field14;
+
+            Log(ssV75.str());
+        }
+    }
+}
+// ========================= V75 RDI TEST END =========================
+
+
+В V75 предполагается использовать уже существующий:
+
+cpp
+void* caller = _ReturnAddress();
+
+
+и существующую проверку call-site:
+
+text
+offset == 0x1F4EDC8
+
+
+---
+
+Что именно хотим увидеть в V75
+
+Нужны пары:
+
+### Синий
+
+text
+color=0xFF
+RDI=...
++08=...
++0C=...
++10=...
++14=...
+
+
+### Зелёный
+
+text
+color=0xA000
+RDI=...
++08=...
++0C=...
++10=...
++14=...
+
+
+Особенно интересует:
+
+text
+blue:
++08 = A
++0C = B
++10 = C
++14 = D
+
+green:
++08 = A'
++0C = B
++10 = C
++14 = D
+
+
+Если одно поле меняется синхронно с semantic selection — это потенциально наш внутренний state.
+
+Если все поля одинаковы — это тоже полезный отрицательный результат.
+
+
+//Дополинтельный лог через неопределенное время
+### V75
+
+SetTextColor hook расширен до x64 ABI и логирует:
+
+text
+color
+arg3
+arg4
+
+
+Для зелёного и красного значения arg3/arg4 различаются, но пока источник semantic state не установлен.
