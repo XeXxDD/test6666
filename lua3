@@ -1,0 +1,90 @@
+
+local basePath = "E:/Zona Downloads/Stellar.Blade.Complete.Edition-InsaneRamZes/SB/Binaries/Win64/ue4ss/Mods/CustomSpawnerMod/"
+local commandPath = basePath .. "spawn_command.txt"
+local logPath = basePath .. "CustomSpawner.log"
+
+local function Log(message)
+    local file = io.open(logPath, "a")
+    if file then
+        file:write(os.date("[%Y-%m-%d %H:%M:%S] ")
+            .. tostring(message) .. "\n")
+        file:close()
+    end
+end
+
+Log("========================================")
+Log("CustomSpawner started")
+
+local checkInterval = 500
+
+
+
+
+
+local function DiagnoseNA01()
+    Log("TEST1 REQUEST")
+
+    ExecuteInGameThread(function()
+        Log("TEST1 GAME THREAD ENTERED")
+
+        local assetPath =
+            "/Game/Art/Character/Monster/CH_M_NA_01/Blueprints/CH_M_NA_01_Blueprint"
+
+        Log("TEST1 BEFORE LOAD")
+
+        local ok, result = pcall(function()
+            return LoadAsset(assetPath)
+        end)
+
+        Log("TEST1 LOAD PCALL: " .. tostring(ok))
+        Log("TEST1 LOAD RESULT: " .. tostring(result))
+
+        if ok and result then
+            Log("TEST1 ASSET NON-NIL")
+        else
+            Log("TEST1 ASSET MISSING OR ERROR")
+        end
+
+        Log("TEST1 CALLBACK FINISHED")
+    end)
+
+    Log("TEST1 CALLBACK SCHEDULED")
+end
+
+
+local function CheckCommand()
+    local file = io.open(commandPath, "r")
+
+    if file then
+        local command = file:read("*l")
+        file:close()
+
+        local removed, removeError = os.remove(commandPath)
+
+        if command and command ~= "" then
+            Log("COMMAND RECEIVED: " .. command)
+            Log("COMMAND FILE REMOVED: " .. tostring(removed))
+
+			if command == "DIAG_NA01" then
+				DiagnoseNA01()
+			else
+				Log("NPC spawn not implemented yet: " .. command)
+			end
+        end
+    end
+
+    ExecuteWithDelay(checkInterval, CheckCommand)
+end
+
+if type(io) == "table"
+    and type(io.open) == "function"
+    and type(os) == "table"
+    and type(os.remove) == "function"
+    and type(os.date) == "function"
+    and type(ExecuteWithDelay) == "function" then
+
+    Log("Command receiver started")
+    ExecuteWithDelay(checkInterval, CheckCommand)
+else
+    print("[CustomSpawner] ERROR: required Lua API unavailable")
+end
